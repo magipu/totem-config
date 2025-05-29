@@ -1,0 +1,209 @@
+layout: {zmk_keyboard: totem}
+layers:
+  Base:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: F, h: '$$mdi:apple-keyboard-command$$'}
+    - G
+    - H
+    - {t: J, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+    - {t: ;, h: '$$mdi:apple-keyboard-control$$'}
+  - ['$$mdi:keyboard-esc$$', Z, X, C, V, B, N, M, ',', .]
+  - - /
+    - ''''
+    - {t: '$$mdi:keyboard-tab$$', h: sym}
+    - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
+    - $$mdi:keyboard-space$$
+    - {t: '$$mdi:keyboard-return$$', h: nav}
+    - {t: '$$mdi:backspace$$', h: num, s: '$$mdi:backspace-reverse-outline$$'}
+    - $$tabler:terminal$$
+  nav:
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - $$mdi:apple-keyboard-control$$
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-shift$$
+    - $$mdi:apple-keyboard-command$$
+    - {type: trans}
+    - $$mdi:arrow-left-bold$$
+    - $$mdi:arrow-down-bold$$
+    - $$mdi:arrow-up-bold$$
+    - $$mdi:arrow-right-bold$$
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - HOME
+    - $$mdi:transfer-down$$
+    - $$mdi:transfer-up$$
+    - END
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+  num:
+  - - '['
+    - '1'
+    - '2'
+    - '3'
+    - ']'
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - '*'
+    - '4'
+    - '5'
+    - '6'
+    - +
+    - {type: trans}
+    - $$mdi:apple-keyboard-command$$
+    - $$mdi:apple-keyboard-shift$$
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-control$$
+  - - '`'
+    - /
+    - '7'
+    - '8'
+    - '9'
+    - '-'
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - '0'
+    - .
+    - '='
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+  sym:
+  - - '`'
+    - <
+    - '>'
+    - '-'
+    - '|'
+    - ^
+    - '{'
+    - '}'
+    - {type: trans}
+    - {type: trans}
+  - - '!'
+    - '*'
+    - /
+    - '='
+    - '&'
+    - '#'
+    - {t: (, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: ), h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: '"', h: '$$mdi:apple-keyboard-option$$'}
+    - {t: ;, h: '$$mdi:apple-keyboard-control$$'}
+  - - {type: trans}
+    - '~'
+    - +
+    - '['
+    - ']'
+    - '%'
+    - '@'
+    - ':'
+    - ','
+    - .
+  - - /
+    - ''''
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  fun:
+  - - BOOT
+    - F1
+    - F2
+    - F3
+    - F4
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - F5
+    - F6
+    - F7
+    - F8
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - Studio Unlock
+    - {type: trans}
+    - F9
+    - F10
+    - F11
+    - F12
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: held}
+    - {type: trans}
+combos:
+- p: [23, 22]
+  k: $$tabler:clipboard-copy$$
+- p: [24, 23]
+  k: $$tabler:clipboard-check$$
+- p: [15, 16]
+  k: $$mdi:card-search$$
+- p: [14, 13]
+  k: $$tabler:code$$
+- p: [25, 24]
+  k: $$tabler:numbers$$
+  l: [Base]
+- p: [0, 10]
+  k: à
+  l: [Base]
+- p: [1, 2]
+  k: è
+  l: [Base]
+- p: [2, 3]
+  k: é
+  l: [Base]
+- p: [6, 7]
+  k: ì
+  l: [Base]
+- p: [7, 8]
+  k: ò
+  l: [Base]
+- p: [5, 6]
+  k: ù
+  l: [Base]
