@@ -16,6 +16,7 @@
 #define ZMK_HELPERS_KEEP_NATIVE    0
 
 #include <behaviors.dtsi>
+#include <behaviors/num_word.dtsi> // Requires auto-layer module.
 #include <dt-bindings/zmk/keys.h>
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/totem.h"
@@ -79,13 +80,22 @@ ZMK_TAP_DANCE(LS_caps,
 
 ZMK_TAP_DANCE(grave_acute,
     tapping-term-ms = <TDANCE_TAP_MS>;
-    bindings = <&kp LA(GRAVE)>, <&kp LA(E)>;
+    bindings = <&kp LALT(GRAVE)>, <&kp LALT(E) >;
 )
 
+// Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
+#define SMART_NUM &smart_num NUM 0
+ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
+             tapping-term-ms = <TDANCE_TAP_MS>; quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
+              tapping-term-ms = <TDANCE_TAP_MS>;)
+
+
+ZMK_COMBO(smart_num, SMART_NUM, LB0 LB1, DEF)  // smart_num, active on base
 ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
-ZMK_COMBO(paste,    &kp LG(V), LB1 LB2, ALL)  // paste, active on all layers. Combo keys:
-ZMK_COMBO(alfred, &kp LA(SPACE), RM0 RM1, ALL) // alfred, active on all layers
-ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, ALL) // vscode command palette, active on all layers
+ZMK_COMBO(paste,    &kp LGUI(V), LB1 LB2, ALL)  // paste, active on all layers. Combo keys:
+ZMK_COMBO(alfred, &kp LALT(SPACE), RM0 RM1, ALL) // alfred, active on all layers
+ZMK_COMBO(vscode_cmd, &kp LSHFT(LGUI(P)), LM0 LM1, ALL) // vscode command palette, active on all layers
 
 // define combos for accented characters
 ZMK_COMBO(a_grave, &it_ag, LT4 LM4, DEF)  // à
@@ -104,9 +114,9 @@ ZMK_CONDITIONAL_LAYER(func, NAV NUM, FUN) // Conditional layer for function keys
             display-name = "Base";
             bindings = <
          &kp Q      &kp W      &kp E        &kp R      &kp T          &kp Y          &kp U        &kp I          &kp O      &kp P
-         &hml LC A  &hml LA S  &hml LS D    &hml LG F  &kp G          &kp H          &hmr RG J    &hmr RS K      &hmr RA L  &hmr RC SEMI
+         &hml LCTRL A  &hml LALT S  &hml LSHFT D    &hml LGUI F  &kp G          &kp H          &hmr RGUI J    &hmr RSHFT K      &hmr RALT L  &hmr RCTRL SEMI
 &kp ESC  &kp Z      &kp X      &kp C        &kp V      &kp B          &kp N          &kp M        &kp COMMA      &kp DOT    &kp SLASH     &kp APOS
-                               &lt SYM TAB  &LS_caps   &kp SPACE      &lt NAV ENTER  &bs_del_num  &kp RC(GRAVE)
+                               &lt SYM TAB  &LS_caps   &kp SPACE      &lt NAV ENTER  &bs_del_num  &kp RCTRL(GRAVE)
             >;
         };
 
@@ -114,7 +124,7 @@ ZMK_CONDITIONAL_LAYER(func, NAV NUM, FUN) // Conditional layer for function keys
             display-name = "Navigation";
             bindings = <
         ______  ______  ______  ______  ______      ______    ______     ______     ______     ______
-        &kp LC  &kp LA  &kp LS  &kp LG  ______      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  ______
+        &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI  ______      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  ______
 ______  ______  ______  ______  ______  ______      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    ______  ______
                         ______  ______  ______      ______    ______     ______
             >;
@@ -124,7 +134,7 @@ ______  ______  ______  ______  ______  ______      &kp HOME  &kp PG_DN  &kp PG_
             display-name = "Numbers";
             bindings = <
         &kp LBKT  &kp N1  &kp N2  &kp N3   &kp RBKT       ______  ______  ______  ______  ______
-        &kp STAR  &kp N4  &kp N5  &kp N6   &kp PLUS       ______  &kp RG  &kp RS  &kp RA  &kp LC
+        &kp STAR  &kp N4  &kp N5  &kp N6   &kp PLUS       ______  &kp RGUI  &kp RSHFT  &kp RALT  &kp LCTRL
 ______  &kp FSLH  &kp N7  &kp N8  &kp N9   &kp MINUS      ______  ______  ______  ______  ______  ______
                              &kp N0  &kp DOT  &kp EQUAL      ______  ______  ______
             >;
@@ -134,7 +144,7 @@ ______  &kp FSLH  &kp N7  &kp N8  &kp N9   &kp MINUS      ______  ______  ______
             display-name = "Symbols";
             bindings = <
         &kp GRAVE  &kp LT    &kp GT    &kp MINUS  &kp PIPE       &kp CARET  &kp LBRC      &kp RBRC      ______       ______
-        &kp EXCL   &kp STAR  &kp FSLH  &kp EQUAL  &kp AMPS       &kp HASH   &hmr RG LPAR  &hmr RS RPAR  &hmr RA DQT  &hmr RC SEMI
+        &kp EXCL   &kp STAR  &kp FSLH  &kp EQUAL  &kp AMPS       &kp HASH   &hmr RGUI LPAR  &hmr RSHFT RPAR  &hmr RALT DQT  &hmr RCTRL SEMI
 ______  &kp TILDE  &kp PLUS  &kp LBKT  &kp RBKT   &kp PRCNT      &kp AT     &kp COLON     &kp COMMA     &kp DOT      &kp SLASH     &kp APOS
                              ______    ______     ______         ______     ______        ______
             >;

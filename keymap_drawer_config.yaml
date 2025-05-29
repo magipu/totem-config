@@ -227,20 +227,20 @@ parse_config:
       $$mdi:transfer-down$$
 
       # Modifiers
-    LC: $$mdi:apple-keyboard-control$$
-    LA: $$mdi:apple-keyboard-option$$
-    LS: $$mdi:apple-keyboard-shift$$
-    LG: $$mdi:apple-keyboard-command$$
-    RC: $$mdi:apple-keyboard-control$$
-    RA: $$mdi:apple-keyboard-option$$
-    RS: $$mdi:apple-keyboard-shift$$
-    RG: $$mdi:apple-keyboard-command$$
-    LS(LC(LA)): $$mdi:triangle$$ # Meh
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LALT: $$mdi:apple-keyboard-option$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    LGUI: $$mdi:apple-keyboard-command$$
+    RCTRL: $$mdi:apple-keyboard-control$$
+    RALT: $$mdi:apple-keyboard-option$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    RGUI: $$mdi:apple-keyboard-command$$
+    LSHFT(LCTRL(LALT)): $$mdi:triangle$$ # Meh
 
-    LS(LG(P)): $$tabler:code$$ # Vscode Command palette
-    RC(GRAVE): $$tabler:terminal$$ # Terminal
-    LA(SPACE): $$mdi:card-search$$ # Search
-    LG(V):
+    LSHFT(LGUI(P)): $$tabler:code$$ # Vscode Command palette
+    RCTRL(GRAVE): $$tabler:terminal$$ # Terminal
+    LALT(SPACE): $$mdi:card-search$$ # Search
+    LGUI(V):
       $$tabler:clipboard-check$$ # Paste
 
 

@@ -178,6 +178,9 @@ layers:
     - {type: held}
     - {type: trans}
 combos:
+- p: [25, 24]
+  k: $$tabler:numbers$$
+  l: [Base]
 - p: [23, 22]
   k: $$tabler:clipboard-copy$$
 - p: [24, 23]
