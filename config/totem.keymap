@@ -16,7 +16,6 @@
 #define ZMK_HELPERS_KEEP_NATIVE    0
 
 #include <behaviors.dtsi>
-#include <behaviors/num_word.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/totem.h"
@@ -66,12 +65,6 @@ ZMK_MOD_MORPH(bs_del_num,
     bindings = <&lt NUM BSPC>, <&kp DEL>;
 mods = <(MOD_LSFT | MOD_RSFT)>;
 )
-// Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
-#define SMART_NUM &smart_num NUM 0
-ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
-             tapping-term-ms = <TDANCE_TAP_MS>; quick-tap-ms = <QUICK_TAP_MS>;)
-ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
-              tapping-term-ms = <TDANCE_TAP_MS>;)
 
 // tap: copy | double-tap: cut
 ZMK_TAP_DANCE(copy_cut,
@@ -93,8 +86,6 @@ ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-ta
 ZMK_COMBO(paste,    &kp LG(V), LB1 LB2, ALL)  // paste, active on all layers. Combo keys:
 ZMK_COMBO(alfred, &kp LA(SPACE), RM0 RM1, ALL) // alfred, active on all layers
 ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, ALL) // vscode command palette, active on all layers
-
-ZMK_COMBO(smart_num, SMART_NUM, LB0 LB1, DEF)  // smart_num, active on base
 
 // define combos for accented characters
 ZMK_COMBO(a_grave, &it_ag, LT4 LM4, DEF)  // à

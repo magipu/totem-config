@@ -186,9 +186,6 @@ combos:
   k: $$mdi:card-search$$
 - p: [14, 13]
   k: $$tabler:code$$
-- p: [25, 24]
-  k: $$tabler:numbers$$
-  l: [Base]
 - p: [0, 10]
   k: {t: á, s: Á}
   l: [Base]
