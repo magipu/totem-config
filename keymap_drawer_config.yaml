@@ -43,18 +43,24 @@ parse_config:
     '&bootloader': 'BOOT'
     '&copy_cut': $$tabler:clipboard-copy$$
     '&studio_unlock': 'Studio Unlock'
-    '&it_a_grave': 'à'
-    '&it_e_grave': 'è'
-    '&it_e_acute': 'é'
-    '&it_i_grave': 'ì'
-    '&it_o_grave': 'ò'
-    '&it_u_grave': 'ù'
     '&LS_caps':
       tap: $$mdi:apple-keyboard-shift$$
       hold: $$mdi:apple-keyboard-caps$$
     '&smart_num':
       tap: $$tabler:numbers$$
       hold: ''
+    '&it_ag_lower': á
+    '&it_eg_lower': é
+    '&it_ea_lower': è
+    '&it_ig_lower': í
+    '&it_og_lower': ó
+    '&it_ug_lower': ú
+    '&it_ag_upper': Á
+    '&it_eg_upper': É
+    '&it_ea_upper': È
+    '&it_ig_upper': Í
+    '&it_og_upper': Ó
+    '&it_ug_upper': Ú
   sticky_label: sticky
   toggle_label: toggle
   tap_toggle_label: tap-toggle
@@ -289,7 +295,30 @@ parse_config:
     RG(RS(V)):
       tap: $$mdi:video$$
       hold: zoom
-
-  zmk_combos: {}
+  zmk_combos:
+    a_grave:
+      k:
+        t: 'à'
+        s: 'À'
+    e_grave:
+      k:
+        t: 'è'
+        s: 'È'
+    e_acute:
+      k:
+        t: 'é'
+        s: 'É'
+    i_grave:
+      k:
+        t: 'ì'
+        s: 'Ì'
+    o_grave:
+      k:
+        t: 'ò'
+        s: 'Ò'
+    u_grave:
+      k:
+        t: 'ù'
+        s: 'Ù'
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []

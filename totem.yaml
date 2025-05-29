@@ -15,13 +15,13 @@ layers:
   - ['$$mdi:keyboard-esc$$', Z, X, C, V, B, N, M, ',', .]
   - - /
     - ''''
-    - {t: '$$mdi:keyboard-tab$$', h: sym}
+    - {t: '$$mdi:keyboard-tab$$', h: Symbols}
     - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
     - $$mdi:keyboard-space$$
-    - {t: '$$mdi:keyboard-return$$', h: nav}
-    - {t: '$$mdi:backspace$$', h: num, s: '$$mdi:backspace-reverse-outline$$'}
+    - {t: '$$mdi:keyboard-return$$', h: Navigation}
+    - {t: '$$mdi:backspace$$', h: Numbers, s: '$$mdi:backspace-reverse-outline$$'}
     - $$tabler:terminal$$
-  nav:
+  Navigation:
   - - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -60,7 +60,7 @@ layers:
     - {type: held}
     - {type: trans}
     - {type: trans}
-  num:
+  Numbers:
   - - '['
     - '1'
     - '2'
@@ -81,7 +81,7 @@ layers:
     - $$mdi:apple-keyboard-shift$$
     - $$mdi:apple-keyboard-option$$
     - $$mdi:apple-keyboard-control$$
-  - - '`'
+  - - {type: trans}
     - /
     - '7'
     - '8'
@@ -99,7 +99,7 @@ layers:
     - {type: trans}
     - {type: held}
     - {type: trans}
-  sym:
+  Symbols:
   - - '`'
     - <
     - '>'
@@ -138,7 +138,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-  fun:
+  Functions:
   - - BOOT
     - F1
     - F2
@@ -190,20 +190,20 @@ combos:
   k: $$tabler:numbers$$
   l: [Base]
 - p: [0, 10]
-  k: à
+  k: {t: á, s: Á}
   l: [Base]
 - p: [1, 2]
-  k: è
+  k: {t: é, s: É}
   l: [Base]
 - p: [2, 3]
-  k: é
+  k: {t: è, s: È}
   l: [Base]
 - p: [6, 7]
-  k: ì
+  k: {t: í, s: Í}
   l: [Base]
 - p: [7, 8]
-  k: ò
+  k: {t: ó, s: Ó}
   l: [Base]
 - p: [5, 6]
-  k: ù
+  k: {t: ú, s: Ú}
   l: [Base]

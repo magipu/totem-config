@@ -417,8 +417,8 @@ path.combo {
 <g transform="translate(255, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-tab"/>
-<a href="#sym">
-<text x="0" y="24" class="key hold layer-activator">sym</text>
+<a href="#Symbols">
+<text x="0" y="24" class="key hold layer-activator">Symbols</text>
 </a></g>
 <g transform="translate(320, 245) rotate(15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -432,14 +432,14 @@ path.combo {
 <g transform="translate(470, 270) rotate(-30.0)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-return"/>
-<a href="#nav">
-<text x="0" y="24" class="key hold layer-activator">nav</text>
+<a href="#Navigation">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 70%">Navigation</tspan></text>
 </a></g>
 <g transform="translate(531, 245) rotate(-15.0)" class="key keypos-36">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:backspace"/>
-<a href="#num">
-<text x="0" y="24" class="key hold layer-activator">num</text>
+<a href="#Numbers">
+<text x="0" y="24" class="key hold layer-activator">Numbers</text>
 </a><use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-5" y="-24" height="10" width="10.0" class="key shifted glyph mdi:backspace-reverse-outline"/>
 </g>
 <g transform="translate(596, 236)" class="key keypos-37">
@@ -468,32 +468,38 @@ path.combo {
 </g>
 <g class="combo combopos-5">
 <rect rx="6" ry="6" x="68" y="128" width="28" height="26" class="combo"/>
-<text x="82" y="141" class="combo tap">à</text>
+<text x="82" y="141" class="combo tap">á</text>
+<text x="82" y="130" class="combo shifted">Á</text>
 </g>
 <g class="combo combopos-6">
 <rect rx="6" ry="6" x="164" y="32" width="28" height="26" class="combo"/>
-<text x="178" y="45" class="combo tap">è</text>
+<text x="178" y="45" class="combo tap">é</text>
+<text x="178" y="34" class="combo shifted">É</text>
 </g>
 <g class="combo combopos-7">
 <rect rx="6" ry="6" x="228" y="29" width="28" height="26" class="combo"/>
-<text x="242" y="42" class="combo tap">é</text>
+<text x="242" y="42" class="combo tap">è</text>
+<text x="242" y="31" class="combo shifted">È</text>
 </g>
 <g class="combo combopos-8">
 <rect rx="6" ry="6" x="595" y="29" width="28" height="26" class="combo"/>
-<text x="609" y="42" class="combo tap">ì</text>
+<text x="609" y="42" class="combo tap">í</text>
+<text x="609" y="31" class="combo shifted">Í</text>
 </g>
 <g class="combo combopos-9">
 <rect rx="6" ry="6" x="659" y="32" width="28" height="26" class="combo"/>
-<text x="673" y="45" class="combo tap">ò</text>
+<text x="673" y="45" class="combo tap">ó</text>
+<text x="673" y="34" class="combo shifted">Ó</text>
 </g>
 <g class="combo combopos-10">
 <rect rx="6" ry="6" x="536" y="47" width="28" height="26" class="combo"/>
-<text x="550" y="60" class="combo tap">ù</text>
+<text x="550" y="60" class="combo tap">ú</text>
+<text x="550" y="49" class="combo shifted">Ú</text>
 </g>
 </g>
 </g>
-<g transform="translate(30, 366)" class="layer-nav">
-<text x="0" y="28" class="label" id="nav">nav:</text>
+<g transform="translate(30, 366)" class="layer-Navigation">
+<text x="0" y="28" class="label" id="Navigation">Navigation:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(78, 113) rotate(-10.0)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
@@ -639,8 +645,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 731)" class="layer-num">
-<text x="0" y="28" class="label" id="num">num:</text>
+<g transform="translate(30, 731)" class="layer-Numbers">
+<text x="0" y="28" class="label" id="Numbers">Numbers:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(78, 113) rotate(-10.0)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -716,9 +722,8 @@ path.combo {
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-control"/>
 </g>
-<g transform="translate(34, 209) rotate(-10.0)" class="key keypos-20">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<text x="0" y="0" class="key tap">`</text>
+<g transform="translate(34, 209) rotate(-10.0)" class="key trans keypos-20">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 </g>
 <g transform="translate(97, 223) rotate(-10.0)" class="key keypos-21">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -797,8 +802,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 1097)" class="layer-sym">
-<text x="0" y="28" class="label" id="sym">sym:</text>
+<g transform="translate(30, 1097)" class="layer-Symbols">
+<text x="0" y="28" class="label" id="Symbols">Symbols:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(78, 113) rotate(-10.0)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -965,8 +970,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 1462)" class="layer-fun">
-<text x="0" y="28" class="label" id="fun">fun:</text>
+<g transform="translate(30, 1462)" class="layer-Functions">
+<text x="0" y="28" class="label" id="Functions">Functions:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(78, 113) rotate(-10.0)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>

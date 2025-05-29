@@ -11,13 +11,13 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-#include <behaviors.dtsi>
-#include <behaviors/num_word.dtsi>
-#include <dt-bindings/zmk/keys.h>
 
 #define HOST_OS                    2
 #define ZMK_HELPERS_KEEP_NATIVE    0
 
+#include <behaviors.dtsi>
+#include <behaviors/num_word.dtsi>
+#include <dt-bindings/zmk/keys.h>
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/totem.h"
 #include "zmk-helpers/unicode-chars/italian.dtsi"
@@ -132,10 +132,10 @@ ______  ______  ______  ______  ______  ______      &kp HOME  &kp PG_DN  &kp PG_
         num_layer {
             display-name = "Numbers";
             bindings = <
-           &kp LBKT  &kp N1  &kp N2  &kp N3   &kp RBKT      ______  ______  ______  ______  ______
-           &kp STAR  &kp N4  &kp N5  &kp N6   &kp PLUS      ______  &kp RG  &kp RS  &kp RA  &kp LC
-&kp GRAVE  &kp FSLH  &kp N7  &kp N8  &kp N9   &kp MINU      ______  ______  ______  ______  ______  ______
-                             &kp N0  &kp DOT  &kp EQUA      ______  ______  ______
+        &kp LBKT  &kp N1  &kp N2  &kp N3   &kp RBKT       ______  ______  ______  ______  ______
+        &kp STAR  &kp N4  &kp N5  &kp N6   &kp PLUS       ______  &kp RG  &kp RS  &kp RA  &kp LC
+______  &kp FSLH  &kp N7  &kp N8  &kp N9   &kp MINUS      ______  ______  ______  ______  ______  ______
+                             &kp N0  &kp DOT  &kp EQUAL      ______  ______  ______
             >;
         };
 
