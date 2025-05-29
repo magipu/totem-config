@@ -15,14 +15,15 @@
 #include <behaviors/num_word.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-
 #define HOST_OS                    2
+#define ZMK_HELPERS_KEEP_NATIVE    0
 
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/totem.h"
 #include "zmk-helpers/unicode-chars/italian.dtsi"
 
-#define ZMK_HELPERS_KEEP_NATIVE    0
+#define ______ &trans
+
 #define DEF   0
 #define NAV   1
 #define NUM   2
@@ -109,48 +110,52 @@ ZMK_CONDITIONAL_LAYER(func, NAV NUM, FUN) // Conditional layer for function keys
         compatible = "zmk,keymap";
 
         base_layer {
-            label = "Base";
+            display-name = "Base";
             bindings = <
-         &kp Q      &kp W      &kp E        &kp R      &kp T        &kp Y          &kp U        &kp I          &kp O      &kp P
-         &hml LC A  &hml LA S  &hml LS D    &hml LG F  &kp G        &kp H          &hmr RG J    &hmr RS K      &hmr RA L  &hmr RC SEMI
-&kp ESC  &kp Z      &kp X      &kp C        &kp V      &kp B        &kp N          &kp M        &kp COMMA      &kp DOT    &kp SLASH     &kp APOS
-                               &lt SYM TAB  &LS_caps   &kp SPACE    &lt NAV ENTER  &bs_del_num  &kp RC(GRAVE)
+         &kp Q      &kp W      &kp E        &kp R      &kp T          &kp Y          &kp U        &kp I          &kp O      &kp P
+         &hml LC A  &hml LA S  &hml LS D    &hml LG F  &kp G          &kp H          &hmr RG J    &hmr RS K      &hmr RA L  &hmr RC SEMI
+&kp ESC  &kp Z      &kp X      &kp C        &kp V      &kp B          &kp N          &kp M        &kp COMMA      &kp DOT    &kp SLASH     &kp APOS
+                               &lt SYM TAB  &LS_caps   &kp SPACE      &lt NAV ENTER  &bs_del_num  &kp RC(GRAVE)
             >;
         };
 
         nav_layer {
+            display-name = "Navigation";
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans    &trans     &trans     &trans     &trans
-        &kp LC  &kp LA  &kp LS  &kp LG  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
-                        &trans  &trans  &trans    &trans    &trans     &trans
+        ______  ______  ______  ______  ______      ______    ______     ______     ______     ______
+        &kp LC  &kp LA  &kp LS  &kp LG  ______      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  ______
+______  ______  ______  ______  ______  ______      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    ______  ______
+                        ______  ______  ______      ______    ______     ______
             >;
         };
 
         num_layer {
+            display-name = "Numbers";
             bindings = <
-           &kp LBKT  &kp N1  &kp N2  &kp N3   &kp RBKT     &trans  &trans  &trans  &trans  &trans
-           &kp STAR  &kp N4  &kp N5  &kp N6   &kp PLUS     &trans  &kp RG  &kp RS  &kp RA  &kp LC
-&kp GRAVE  &kp FSLH  &kp N7  &kp N8  &kp N9   &kp MINUS    &trans  &trans  &trans  &trans  &trans  &trans
-                             &kp N0  &kp DOT  &kp EQUAL    &trans  &trans  &trans
+           &kp LBKT  &kp N1  &kp N2  &kp N3   &kp RBKT      ______  ______  ______  ______  ______
+           &kp STAR  &kp N4  &kp N5  &kp N6   &kp PLUS      ______  &kp RG  &kp RS  &kp RA  &kp LC
+&kp GRAVE  &kp FSLH  &kp N7  &kp N8  &kp N9   &kp MINU      ______  ______  ______  ______  ______  ______
+                             &kp N0  &kp DOT  &kp EQUA      ______  ______  ______
             >;
         };
 
         sym_layer {
+            display-name = "Symbols";
             bindings = <
-        &kp GRAVE  &kp LT    &kp GT    &kp MINUS  &kp PIPE     &kp CARET  &kp LBRC      &kp RBRC      &trans       &trans
-        &kp EXCL   &kp STAR  &kp FSLH  &kp EQUAL  &kp AMPS     &kp HASH   &hmr RG LPAR  &hmr RS RPAR  &hmr RA DQT  &hmr RC SEMI
-&trans  &kp TILDE  &kp PLUS  &kp LBKT  &kp RBKT   &kp PRCNT    &kp AT     &kp COLON     &kp COMMA     &kp DOT      &kp SLASH     &kp APOS
-                             &trans    &trans     &trans       &trans     &trans        &trans
+        &kp GRAVE  &kp LT    &kp GT    &kp MINUS  &kp PIPE       &kp CARET  &kp LBRC      &kp RBRC      ______       ______
+        &kp EXCL   &kp STAR  &kp FSLH  &kp EQUAL  &kp AMPS       &kp HASH   &hmr RG LPAR  &hmr RS RPAR  &hmr RA DQT  &hmr RC SEMI
+______  &kp TILDE  &kp PLUS  &kp LBKT  &kp RBKT   &kp PRCNT      &kp AT     &kp COLON     &kp COMMA     &kp DOT      &kp SLASH     &kp APOS
+                             ______    ______     ______         ______     ______        ______
             >;
         };
 
         fun_layer {
+            display-name = "Functions";
             bindings = <
-                &bootloader  &kp F1  &kp F2   &kp F3   &kp F4     &trans  &trans  &trans  &trans  &trans
-                &trans       &kp F5  &kp F6   &kp F7   &kp F8     &trans  &trans  &trans  &trans  &trans
-&studio_unlock  &trans       &kp F9  &kp F10  &kp F11  &kp F12    &trans  &trans  &trans  &trans  &trans  &trans
-                                     &trans   &trans   &trans     &trans  &trans  &trans
+                &bootloader  &kp F1  &kp F2   &kp F3   &kp F4       ______  ______  ______  ______  ______
+                ______       &kp F5  &kp F6   &kp F7   &kp F8       ______  ______  ______  ______  ______
+&studio_unlock  ______       &kp F9  &kp F10  &kp F11  &kp F12      ______  ______  ______  ______  ______  ______
+                                     ______   ______   ______       ______  ______  ______
             >;
         };
     };
