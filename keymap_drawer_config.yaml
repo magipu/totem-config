@@ -235,12 +235,11 @@ parse_config:
     RALT: $$mdi:apple-keyboard-option$$
     RSHFT: $$mdi:apple-keyboard-shift$$
     RGUI: $$mdi:apple-keyboard-command$$
-    LSHFT(LCTRL(LALT)): $$mdi:triangle$$ # Meh
 
-    LSHFT(LGUI(P)): $$tabler:code$$ # Vscode Command palette
-    RCTRL(GRAVE): $$tabler:terminal$$ # Terminal
-    LALT(SPACE): $$mdi:card-search$$ # Search
-    LGUI(V):
+    LS(LG(P)): $$tabler:code$$ # Vscode Command palette
+    RC(GRAVE): $$tabler:terminal$$ # Terminal
+    LA(SPACE): $$mdi:card-search$$ # Search
+    LG(V):
       $$tabler:clipboard-check$$ # Paste
 
 

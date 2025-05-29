@@ -93,9 +93,9 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 
 ZMK_COMBO(smart_num, SMART_NUM, LB0 LB1, DEF)  // smart_num, active on base
 ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
-ZMK_COMBO(paste,    &kp LGUI(V), LB1 LB2, ALL)  // paste, active on all layers. Combo keys:
-ZMK_COMBO(alfred, &kp LALT(SPACE), RM0 RM1, ALL) // alfred, active on all layers
-ZMK_COMBO(vscode_cmd, &kp LSHFT(LGUI(P)), LM0 LM1, ALL) // vscode command palette, active on all layers
+ZMK_COMBO(paste,    &kp LG(V), LB1 LB2, ALL)  // paste, active on all layers. Combo keys:
+ZMK_COMBO(alfred, &kp LA(SPACE), RM0 RM1, ALL) // alfred, active on all layers
+ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, ALL) // vscode command palette, active on all layers
 
 // define combos for accented characters
 ZMK_COMBO(a_grave, &it_ag, LT4 LM4, DEF)  // à
@@ -116,7 +116,7 @@ ZMK_CONDITIONAL_LAYER(func, NAV NUM, FUN) // Conditional layer for function keys
          &kp Q      &kp W      &kp E        &kp R      &kp T          &kp Y          &kp U        &kp I          &kp O      &kp P
          &hml LCTRL A  &hml LALT S  &hml LSHFT D    &hml LGUI F  &kp G          &kp H          &hmr RGUI J    &hmr RSHFT K      &hmr RALT L  &hmr RCTRL SEMI
 &kp ESC  &kp Z      &kp X      &kp C        &kp V      &kp B          &kp N          &kp M        &kp COMMA      &kp DOT    &kp SLASH     &kp APOS
-                               &lt SYM TAB  &LS_caps   &kp SPACE      &lt NAV ENTER  &bs_del_num  &kp RCTRL(GRAVE)
+                               &lt SYM TAB  &LS_caps   &kp SPACE      &lt NAV ENTER  &bs_del_num  &kp RC(GRAVE)
             >;
         };
 
