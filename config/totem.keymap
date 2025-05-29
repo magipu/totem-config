@@ -10,14 +10,18 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-#include "zmk-helpers/helper.h"
-#include "zmk-helpers/key-labels/totem.h"
-#include "zmk-helpers/unicode-chars/italian.dtsi"
+
 #include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+
 #define HOST_OS                    2
+
+#include "zmk-helpers/helper.h"
+#include "zmk-helpers/key-labels/totem.h"
+#include "zmk-helpers/unicode-chars/italian.dtsi"
+
 #define ZMK_HELPERS_KEEP_NATIVE    0
 #define DEF   0
 #define NAV   1
