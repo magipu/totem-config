@@ -48,10 +48,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - Alt+$$mdi:arrow-left-bold$$
-    - Alt+$$mdi:arrow-down-bold$$
-    - Alt+$$mdi:arrow-up-bold$$
-    - Alt+$$mdi:arrow-right-bold$$
+    - $$tabler:arrow-big-left-line$$
+    - $$tabler:arrow-big-down-line$$
+    - $$tabler:arrow-big-up-line$$
+    - $$tabler:arrow-big-right-line$$
   - - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -183,6 +183,8 @@ combos:
   l: [Base]
 - p: [23, 22]
   k: $$tabler:clipboard-copy$$
+- p: [24, 22]
+  k: $$tabler:cut$$
 - p: [24, 23]
   k: $$tabler:clipboard-check$$
 - p: [15, 16]

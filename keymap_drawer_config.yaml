@@ -240,8 +240,10 @@ parse_config:
     LS(LG(P)): $$mdi:microsoft-visual-studio-code$$ # Vscode Command palette
     RC(GRAVE): $$tabler:terminal$$ # Terminal
     LA(SPACE): $$mdi:card-search$$ # Search
-    LG(V):
-      $$tabler:clipboard-check$$ # Paste
+    LG(V): $$tabler:clipboard-check$$ # Paste
+    LG(C): $$tabler:clipboard-copy$$ # Copy
+    LG(X):
+      $$tabler:cut$$ # Cut
 
 
       # Whitespace
@@ -288,19 +290,10 @@ parse_config:
     C_AL_LOCK: $$mdi:lock$$
     K_CANCEL: $$mdi:close-box$$
 
-    # Selection
-    LS(LEFT):
-      t: $$phosphor:bold/selection-plus$$
-      s: $$mdi:arrow-left-bold$$
-    LS(RIGHT):
-      t: $$phosphor:bold/selection-plus$$
-      s: $$mdi:arrow-right-bold$$
-    LS(UP):
-      t: $$phosphor:bold/selection-plus$$
-      s: $$mdi:arrow-up-bold$$
-    LS(DOWN):
-      t: $$phosphor:bold/selection-plus$$
-      s: $$mdi:arrow-down-bold$$
+    LA(LEFT): $$tabler:arrow-big-left-line$$
+    LA(RIGHT): $$tabler:arrow-big-right-line$$
+    LA(UP): $$tabler:arrow-big-up-line$$
+    LA(DOWN): $$tabler:arrow-big-down-line$$
 
     # Zoom
     RG(RS(A)):

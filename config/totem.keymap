@@ -59,20 +59,22 @@ ZMK_HOLD_TAP(hmr,
     require-prior-idle-ms = <PRIOR_IDLE_MS>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
+    bindings = <&kp>, < &kp >;
 )
+
 // tap: backspace | shift + tap: delete | hold: num layer
 ZMK_MOD_MORPH(bs_del_num,
     bindings = <&lt NUM BSPC>, <&kp DEL>;
 mods = <(MOD_LSFT | MOD_RSFT)>;
 )
 
-// tap: copy | double-tap: cut
-ZMK_TAP_DANCE(copy_cut,
-    tapping-term-ms = <TDANCE_TAP_MS>;
-    bindings = <&kp LG(C)>, <&kp LG(X)>;
-)
+// // tap: copy | double-tap: cut
+// ZMK_TAP_DANCE(copy_cut,
+//     tapping-term-ms = <TDANCE_TAP_MS>;
+//     bindings = <&kp LG(C)>, <&kp LG(X)>;
+// )
 
+// tap: shift | double-tap: caps word
 ZMK_TAP_DANCE(LS_caps,
     tapping-term-ms = <TDANCE_TAP_MS>;
     bindings = <&kp LSHIFT>, <&caps_word>;
@@ -90,11 +92,11 @@ ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
 ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
               tapping-term-ms = <TDANCE_TAP_MS>;)
 
-
-ZMK_COMBO(smart_num, SMART_NUM, LB0 LB1, DEF)  // smart_num, active on base
-ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
-ZMK_COMBO(paste,    &kp LG(V), LB1 LB2, ALL)  // paste, active on all layers. Combo keys:
-ZMK_COMBO(alfred, &kp LA(SPACE), RM0 RM1, ALL) // alfred, active on all layers
+ZMK_COMBO(smart_num,  SMART_NUM,     LB0 LB1, DEF)  // smart_num, active on base
+ZMK_COMBO(copy,       &kp LG(C),     LB2 LB3, ALL)  // copy, active on all layers
+ZMK_COMBO(cut,        &kp LG(X),     LB1 LB3, ALL)  // cut, active on all layers
+ZMK_COMBO(paste,      &kp LG(V),     LB1 LB2, ALL)  // paste, active on all layers. Combo keys:
+ZMK_COMBO(alfred,     &kp LA(SPACE), RM0 RM1, ALL) // alfred, active on all layers
 ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, ALL) // vscode command palette, active on all layers
 
 // define combos for accented characters
@@ -108,6 +110,10 @@ ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, ALL) // vscode command palette, ac
 ZMK_COMBO(accent_grave_acute, &grave_acute, RB3 RM3, DEF)
 
 ZMK_CONDITIONAL_LAYER(func, NAV NUM, FUN) // Conditional layer for function keys, active when NAV and NUM layers are active
+
+&num_word {
+  continue-list = <BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL SPACE LT GT DLLR COLON>;
+};
 
 / {
     keymap {
