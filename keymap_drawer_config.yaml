@@ -40,15 +40,16 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
-    '&bootloader': 'BOOT'
+    '&bootloader': $$mdi:progress-download$$
+    '&studio_unlock': $$mdi:lock-open-outline$$
     '&copy_cut': $$tabler:clipboard-copy$$
-    '&studio_unlock': 'Studio Unlock'
     '&LS_caps':
       tap: $$mdi:apple-keyboard-shift$$
       hold: $$mdi:apple-keyboard-caps$$
     '&smart_num':
       tap: $$tabler:numbers$$
       hold: ''
+    '&grave_acute': $$tabler:language$$
     '&it_ag_lower': á
     '&it_eg_lower': é
     '&it_ea_lower': è
@@ -236,7 +237,7 @@ parse_config:
     RSHFT: $$mdi:apple-keyboard-shift$$
     RGUI: $$mdi:apple-keyboard-command$$
 
-    LS(LG(P)): $$tabler:code$$ # Vscode Command palette
+    LS(LG(P)): $$mdi:microsoft-visual-studio-code$$ # Vscode Command palette
     RC(GRAVE): $$tabler:terminal$$ # Terminal
     LA(SPACE): $$mdi:card-search$$ # Search
     LG(V):

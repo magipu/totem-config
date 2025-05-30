@@ -80,7 +80,7 @@ ZMK_TAP_DANCE(LS_caps,
 
 ZMK_TAP_DANCE(grave_acute,
     tapping-term-ms = <TDANCE_TAP_MS>;
-    bindings = <&kp LALT(GRAVE)>, <&kp LALT(E) >;
+    bindings = <&kp LA(GRAVE)>, <&kp LA(E) >;
 )
 
 // Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
@@ -104,6 +104,9 @@ ZMK_COMBO(e_acute, &it_ea, LT2 LT1, DEF)  // é
 ZMK_COMBO(i_grave, &it_ig, RT1 RT2, DEF)  // ì
 ZMK_COMBO(o_grave, &it_og, RT2 RT3, DEF)  // ò
 ZMK_COMBO(u_grave, &it_ug, RT0 RT1, DEF)  // ù
+
+ZMK_COMBO(accent_leader, &grave_acute, RB4 RB5 RM4, DEF)
+
 ZMK_CONDITIONAL_LAYER(func, NAV NUM, FUN) // Conditional layer for function keys, active when NAV and NUM layers are active
 
 / {
@@ -153,10 +156,10 @@ ______  &kp TILDE  &kp PLUS  &kp LBKT  &kp RBKT   &kp PRCNT      &kp AT     &kp 
         fun_layer {
             display-name = "Functions";
             bindings = <
-                &bootloader  &kp F1  &kp F2   &kp F3   &kp F4       ______  ______  ______  ______  ______
-                ______       &kp F5  &kp F6   &kp F7   &kp F8       ______  ______  ______  ______  ______
-&studio_unlock  ______       &kp F9  &kp F10  &kp F11  &kp F12      ______  ______  ______  ______  ______  ______
-                                     ______   ______   ______       ______  ______  ______
+                &bootloader  &kp F1  &kp F2   &kp F3   &kp F4       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  ______  &kp C_POWER
+                ______       &kp F5  &kp F6   &kp F7   &kp F8       &kp C_PREV    &kp C_PP      &kp C_NEXT  ______  &kp C_AL_LOCK
+&studio_unlock  ______       &kp F9  &kp F10  &kp F11  &kp F12      &kp C_BRI_UP  &kp C_BRI_DN  ______      ______  &kp K_CANCEL   ______
+                                     ______   ______   ______       ______        ______        ______
             >;
         };
     };

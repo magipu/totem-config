@@ -139,37 +139,37 @@ layers:
     - {type: trans}
     - {type: trans}
   Functions:
-  - - BOOT
+  - - $$mdi:progress-download$$
     - F1
     - F2
     - F3
     - F4
+    - $$mdi:volume-high$$
+    - $$mdi:volume-low$$
+    - $$mdi:volume-off$$
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - $$mdi:power-standby$$
   - - {type: trans}
     - F5
     - F6
     - F7
     - F8
+    - $$mdi:skip-previous$$
+    - $$mdi:play-pause$$
+    - $$mdi:skip-next$$
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-  - - Studio Unlock
+    - $$mdi:lock$$
+  - - $$mdi:lock-open-outline$$
     - {type: trans}
     - F9
     - F10
     - F11
     - F12
+    - $$mdi:brightness-5$$
+    - $$mdi:brightness-7$$
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-  - - {type: trans}
+  - - $$mdi:close-box$$
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -188,7 +188,7 @@ combos:
 - p: [15, 16]
   k: $$mdi:card-search$$
 - p: [14, 13]
-  k: $$tabler:code$$
+  k: $$mdi:microsoft-visual-studio-code$$
 - p: [0, 10]
   k: {t: á, s: Á}
   l: [Base]
@@ -206,4 +206,7 @@ combos:
   l: [Base]
 - p: [5, 6]
   k: {t: ú, s: Ú}
+  l: [Base]
+- p: [30, 31, 19]
+  k: $$tabler:language$$
   l: [Base]
