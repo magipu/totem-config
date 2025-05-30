@@ -78,9 +78,9 @@ ZMK_TAP_DANCE(LS_caps,
     bindings = <&kp LSHIFT>, <&caps_word>;
 )
 
-ZMK_TAP_DANCE(grave_acute,
-    tapping-term-ms = <TDANCE_TAP_MS>;
-    bindings = <&kp LA(GRAVE)>, <&kp LA(E) >;
+ZMK_MOD_MORPH(grave_acute,
+    bindings = <&kp LA(GRAVE)>, <&kp LA(E)>;
+    mods = <(MOD_LSFT | MOD_RSFT)>;
 )
 
 // Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
@@ -98,14 +98,14 @@ ZMK_COMBO(alfred, &kp LA(SPACE), RM0 RM1, ALL) // alfred, active on all layers
 ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, ALL) // vscode command palette, active on all layers
 
 // define combos for accented characters
-ZMK_COMBO(a_grave, &it_ag, LT4 LM4, DEF)  // à
-ZMK_COMBO(e_grave, &it_eg, LT3 LT2, DEF)  // è
-ZMK_COMBO(e_acute, &it_ea, LT2 LT1, DEF)  // é
-ZMK_COMBO(i_grave, &it_ig, RT1 RT2, DEF)  // ì
-ZMK_COMBO(o_grave, &it_og, RT2 RT3, DEF)  // ò
-ZMK_COMBO(u_grave, &it_ug, RT0 RT1, DEF)  // ù
+// ZMK_COMBO(a_grave, &it_ag, LT4 LM4, DEF)  // à
+// ZMK_COMBO(e_grave, &it_eg, LT3 LT2, DEF)  // è
+// ZMK_COMBO(e_acute, &it_ea, LT2 LT1, DEF)  // é
+// ZMK_COMBO(i_grave, &it_ig, RT1 RT2, DEF)  // ì
+// ZMK_COMBO(o_grave, &it_og, RT2 RT3, DEF)  // ò
+// ZMK_COMBO(u_grave, &it_ug, RT0 RT1, DEF)  // ù
 
-ZMK_COMBO(accent_leader, &grave_acute, RB4 RB5 RM4, DEF)
+ZMK_COMBO(accent_grave_acute, &grave_acute, RB3 RM3, DEF)
 
 ZMK_CONDITIONAL_LAYER(func, NAV NUM, FUN) // Conditional layer for function keys, active when NAV and NUM layers are active
 
@@ -124,37 +124,37 @@ ZMK_CONDITIONAL_LAYER(func, NAV NUM, FUN) // Conditional layer for function keys
         };
 
         nav_layer {
-            display-name = "Navigation";
+            display-name = "Nav";
             bindings = <
-        ______  ______  ______  ______  ______      ______    ______     ______     ______     ______
-        &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI  ______      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  ______
-______  ______  ______  ______  ______  ______      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    ______  ______
-                        ______  ______  ______      ______    ______     ______
+        ______  ______  ______  ______  ______      &kp HOME      &kp PG_DN     &kp PG_UP   &kp END        ______
+        &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI    ______        &kp LEFT      &kp DOWN    &kp UP         &kp RIGHT  ______
+______  ______  ______  ______  ______  ______      &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  ______  ______
+                        ______  ______  ______      ______        ______        ______
             >;
         };
 
         num_layer {
-            display-name = "Numbers";
+            display-name = "Num";
             bindings = <
-        &kp LBKT  &kp N1  &kp N2  &kp N3   &kp RBKT       ______  ______  ______  ______  ______
-        &kp STAR  &kp N4  &kp N5  &kp N6   &kp PLUS       ______  &kp RGUI  &kp RSHFT  &kp RALT  &kp LCTRL
-______  &kp FSLH  &kp N7  &kp N8  &kp N9   &kp MINUS      ______  ______  ______  ______  ______  ______
-                             &kp N0  &kp DOT  &kp EQUAL      ______  ______  ______
+        &kp STAR  &kp N1  &kp N2  &kp N3   &kp PLUS       ______  ______  ______  ______  ______
+        &kp FSLH  &kp N4  &kp N5  &kp N6   &kp MINUS      ______  &kp RGUI  &kp RSHFT  &kp RALT  &kp LCTRL
+______  &kp BSPC  &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______  ______  ______  ______  ______
+                             &kp N0  &kp DOT  ______      ______  ______  ______
             >;
         };
 
         sym_layer {
-            display-name = "Symbols";
+            display-name = "Sym";
             bindings = <
-        &kp GRAVE  &kp LT    &kp GT    &kp MINUS  &kp PIPE       &kp CARET  &kp LBRC      &kp RBRC      ______       ______
+        &kp GRAVE  &kp LT    &kp GT    &kp MINUS  &kp PIPE       &kp CARET  &kp LBRC        &kp RBRC      ______       ______
         &kp EXCL   &kp STAR  &kp FSLH  &kp EQUAL  &kp AMPS       &kp HASH   &hmr RGUI LPAR  &hmr RSHFT RPAR  &hmr RALT DQT  &hmr RCTRL SEMI
-______  &kp TILDE  &kp PLUS  &kp LBKT  &kp RBKT   &kp PRCNT      &kp AT     &kp COLON     &kp COMMA     &kp DOT      &kp SLASH     &kp APOS
-                             ______    ______     ______         ______     ______        ______
+______  &kp TILDE  &kp PLUS  &kp LBKT  &kp RBKT   &kp PRCNT      &kp AT     &kp COLON       &kp COMMA     &kp DOT      &kp SLASH     &kp APOS
+                             ______    ______     ______         ______     ______          ______
             >;
         };
 
         fun_layer {
-            display-name = "Functions";
+            display-name = "Fun";
             bindings = <
                 &bootloader  &kp F1  &kp F2   &kp F3   &kp F4       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  ______  &kp C_POWER
                 ______       &kp F5  &kp F6   &kp F7   &kp F8       &kp C_PREV    &kp C_PP      &kp C_NEXT  ______  &kp C_AL_LOCK

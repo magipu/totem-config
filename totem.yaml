@@ -15,22 +15,22 @@ layers:
   - ['$$mdi:keyboard-esc$$', Z, X, C, V, B, N, M, ',', .]
   - - /
     - ''''
-    - {t: '$$mdi:keyboard-tab$$', h: Symbols}
+    - {t: '$$mdi:keyboard-tab$$', h: Sym}
     - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
     - $$mdi:keyboard-space$$
-    - {t: '$$mdi:keyboard-return$$', h: Navigation}
-    - {t: '$$mdi:backspace$$', h: Numbers, s: '$$mdi:backspace-reverse-outline$$'}
+    - {t: '$$mdi:keyboard-return$$', h: Nav}
+    - {t: '$$mdi:backspace$$', h: Num, s: '$$mdi:backspace-reverse-outline$$'}
     - $$tabler:terminal$$
-  Navigation:
+  Nav:
   - - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - HOME
+    - $$mdi:transfer-down$$
+    - $$mdi:transfer-up$$
+    - END
     - {type: trans}
   - - $$mdi:apple-keyboard-control$$
     - $$mdi:apple-keyboard-option$$
@@ -48,10 +48,10 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - HOME
-    - $$mdi:transfer-down$$
-    - $$mdi:transfer-up$$
-    - END
+    - Alt+$$mdi:arrow-left-bold$$
+    - Alt+$$mdi:arrow-down-bold$$
+    - Alt+$$mdi:arrow-up-bold$$
+    - Alt+$$mdi:arrow-right-bold$$
   - - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -60,33 +60,33 @@ layers:
     - {type: held}
     - {type: trans}
     - {type: trans}
-  Numbers:
-  - - '['
+  Num:
+  - - '*'
     - '1'
     - '2'
     - '3'
-    - ']'
+    - +
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
-  - - '*'
+  - - /
     - '4'
     - '5'
     - '6'
-    - +
+    - '-'
     - {type: trans}
     - $$mdi:apple-keyboard-command$$
     - $$mdi:apple-keyboard-shift$$
     - $$mdi:apple-keyboard-option$$
     - $$mdi:apple-keyboard-control$$
   - - {type: trans}
-    - /
+    - {t: '$$mdi:backspace$$', type: backspace}
     - '7'
     - '8'
     - '9'
-    - '-'
+    - '='
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -95,11 +95,11 @@ layers:
     - {type: trans}
     - '0'
     - .
-    - '='
+    - {type: trans}
     - {type: trans}
     - {type: held}
     - {type: trans}
-  Symbols:
+  Sym:
   - - '`'
     - <
     - '>'
@@ -138,7 +138,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-  Functions:
+  Fun:
   - - $$mdi:progress-download$$
     - F1
     - F2
@@ -189,24 +189,6 @@ combos:
   k: $$mdi:card-search$$
 - p: [14, 13]
   k: $$mdi:microsoft-visual-studio-code$$
-- p: [0, 10]
-  k: {t: á, s: Á}
-  l: [Base]
-- p: [1, 2]
-  k: {t: é, s: É}
-  l: [Base]
-- p: [2, 3]
-  k: {t: è, s: È}
-  l: [Base]
-- p: [6, 7]
-  k: {t: í, s: Í}
-  l: [Base]
-- p: [7, 8]
-  k: {t: ó, s: Ó}
-  l: [Base]
-- p: [5, 6]
-  k: {t: ú, s: Ú}
-  l: [Base]
-- p: [30, 31, 19]
+- p: [29, 18]
   k: $$tabler:language$$
   l: [Base]

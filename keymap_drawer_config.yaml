@@ -288,6 +288,20 @@ parse_config:
     C_AL_LOCK: $$mdi:lock$$
     K_CANCEL: $$mdi:close-box$$
 
+    # Selection
+    LS(LEFT):
+      t: $$phosphor:bold/selection-plus$$
+      s: $$mdi:arrow-left-bold$$
+    LS(RIGHT):
+      t: $$phosphor:bold/selection-plus$$
+      s: $$mdi:arrow-right-bold$$
+    LS(UP):
+      t: $$phosphor:bold/selection-plus$$
+      s: $$mdi:arrow-up-bold$$
+    LS(DOWN):
+      t: $$phosphor:bold/selection-plus$$
+      s: $$mdi:arrow-down-bold$$
+
     # Zoom
     RG(RS(A)):
       tap: $$mdi:microphone$$
