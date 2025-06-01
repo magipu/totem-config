@@ -96,8 +96,8 @@ ZMK_COMBO(smart_num,  SMART_NUM,     LB0 LB1, DEF)  // smart_num, active on base
 ZMK_COMBO(copy,       &kp LG(C),     LB2 LB3, ALL)  // copy, active on all layers
 ZMK_COMBO(cut,        &kp LG(X),     LB1 LB3, ALL)  // cut, active on all layers
 ZMK_COMBO(paste,      &kp LG(V),     LB1 LB2, ALL)  // paste, active on all layers. Combo keys:
-ZMK_COMBO(alfred,     &kp LA(SPACE), RM0 RM1, ALL) // alfred, active on all layers
-ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, ALL) // vscode command palette, active on all layers
+ZMK_COMBO(alfred,     &kp LA(SPACE), RM0 RM1, ALL)  // alfred, active on all layers
+ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, ALL)  // vscode command palette, active on all layers
 
 // define combos for accented characters
 // ZMK_COMBO(a_grave, &it_ag, LT4 LM4, DEF)  // à
