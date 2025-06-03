@@ -43,9 +43,7 @@ parse_config:
     '&bootloader': $$mdi:progress-download$$
     '&studio_unlock': $$mdi:lock-open-outline$$
     '&copy_cut': $$tabler:clipboard-copy$$
-    '&LS_caps':
-      tap: $$mdi:apple-keyboard-shift$$
-      hold: $$mdi:apple-keyboard-caps$$
+    '&LS_caps': $$mdi:apple-keyboard-shift$$
     '&smart_num':
       tap: $$tabler:numbers$$
       hold: ''

@@ -16,11 +16,11 @@ layers:
   - - /
     - ''''
     - {t: '$$mdi:keyboard-tab$$', h: Sym}
-    - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$'}
+    - $$mdi:apple-keyboard-shift$$
     - $$mdi:keyboard-space$$
     - {t: '$$mdi:keyboard-return$$', h: Nav}
     - {t: '$$mdi:backspace$$', h: Num, s: '$$mdi:backspace-reverse-outline$$'}
-    - $$tabler:terminal$$
+    - {t: '$$tabler:terminal$$', h: Sym}
   Nav:
   - - {type: trans}
     - {type: trans}
@@ -77,8 +77,8 @@ layers:
     - '6'
     - '-'
     - {type: trans}
-    - $$mdi:apple-keyboard-command$$
-    - $$mdi:apple-keyboard-shift$$
+    - {t: (, h: '$$mdi:apple-keyboard-command$$'}
+    - {t: ), h: '$$mdi:apple-keyboard-shift$$'}
     - $$mdi:apple-keyboard-option$$
     - $$mdi:apple-keyboard-control$$
   - - {type: trans}
@@ -100,33 +100,24 @@ layers:
     - {type: held}
     - {type: trans}
   Sym:
-  - - '`'
-    - <
-    - '>'
+  - ['*', <, '>', '&', +, '@', '{', '}', ^, '~']
+  - - /
+    - '`'
+    - '!'
+    - '%'
     - '-'
-    - '|'
-    - ^
-    - '{'
-    - '}'
-    - {type: trans}
-    - {type: trans}
-  - - '!'
-    - '*'
-    - /
-    - '='
-    - '&'
     - '#'
     - {t: (, h: '$$mdi:apple-keyboard-command$$'}
     - {t: ), h: '$$mdi:apple-keyboard-shift$$'}
     - {t: '"', h: '$$mdi:apple-keyboard-option$$'}
     - {t: ;, h: '$$mdi:apple-keyboard-control$$'}
   - - {type: trans}
-    - '~'
-    - +
+    - {t: '$$mdi:backspace$$', type: backspace}
+    - '|'
     - '['
     - ']'
-    - '%'
-    - '@'
+    - '='
+    - _
     - ':'
     - ','
     - .
