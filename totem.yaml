@@ -15,12 +15,12 @@ layers:
   - ['$$mdi:keyboard-esc$$', Z, X, C, V, B, N, M, ',', .]
   - - /
     - ''''
-    - {t: '$$mdi:keyboard-tab$$', h: Sym}
+    - $$mdi:keyboard-tab$$
     - $$mdi:apple-keyboard-shift$$
-    - $$mdi:keyboard-space$$
+    - {t: '$$mdi:keyboard-space$$', h: Num}
     - {t: '$$mdi:keyboard-return$$', h: Nav}
-    - {t: '$$mdi:backspace$$', h: Num, s: '$$mdi:backspace-reverse-outline$$'}
-    - {t: '$$tabler:terminal$$', h: Sym}
+    - {t: '$$mdi:backspace$$', h: Sym, s: '$$mdi:backspace-reverse-outline$$'}
+    - {t: '$$tabler:terminal$$', h: Fun}
   Nav:
   - - {type: trans}
     - {type: trans}
@@ -95,12 +95,12 @@ layers:
     - {type: trans}
     - '0'
     - .
-    - {type: trans}
-    - {type: trans}
     - {type: held}
     - {type: trans}
+    - {type: trans}
+    - {type: trans}
   Sym:
-  - ['*', <, '>', '&', +, '@', '{', '}', ^, '~']
+  - ['*', £, $, '&', +, '@', '{', '}', ^, '~']
   - - /
     - '`'
     - '!'
@@ -119,15 +119,15 @@ layers:
     - '='
     - _
     - ':'
-    - ','
-    - .
-  - - /
+    - <
+    - '>'
+  - - '?'
     - ''''
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {type: held}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
     - {type: trans}
   Fun:
   - - $$mdi:progress-download$$
@@ -165,23 +165,34 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: held}
-    - {type: held}
     - {type: trans}
+    - {type: trans}
+    - {type: held}
 combos:
 - p: [25, 24]
   k: $$tabler:numbers$$
   l: [Base]
 - p: [23, 22]
   k: $$tabler:clipboard-copy$$
+  l: [Base]
 - p: [24, 22]
   k: $$tabler:cut$$
+  l: [Base]
 - p: [24, 23]
   k: $$tabler:clipboard-check$$
+  l: [Base]
 - p: [15, 16]
   k: $$mdi:card-search$$
+  l: [Base]
 - p: [14, 13]
   k: $$mdi:microsoft-visual-studio-code$$
+  l: [Base]
+- p: [5, 15]
+  k: $$tabler:arrow-back-up$$
+  l: [Base]
+- p: [26, 15]
+  k: $$tabler:arrow-forward-up$$
+  l: [Base]
 - p: [29, 18]
   k: $$tabler:language$$
   l: [Base]

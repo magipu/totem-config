@@ -215,6 +215,7 @@ parse_config:
     NON_US_HASH: '#'
     NUHS: '#'
     TILDE2: '~'
+    LS(POUND): '£'
 
     # Arrow keys
     UP: $$mdi:arrow-up-bold$$
@@ -240,8 +241,11 @@ parse_config:
     LA(SPACE): $$mdi:card-search$$ # Search
     LG(V): $$tabler:clipboard-check$$ # Paste
     LG(C): $$tabler:clipboard-copy$$ # Copy
-    LG(X):
-      $$tabler:cut$$ # Cut
+    LG(X): $$tabler:cut$$ # Cut
+
+    LG(Z): $$tabler:arrow-back-up$$ # Undo
+    LG(LS(Z)):
+      $$tabler:arrow-forward-up$$ # Redo
 
 
       # Whitespace

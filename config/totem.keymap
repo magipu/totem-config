@@ -63,8 +63,8 @@ ZMK_HOLD_TAP(hmr,
 )
 
 // tap: backspace | shift + tap: delete | hold: num layer
-ZMK_MOD_MORPH(bs_del_num,
-    bindings = <&lt NUM BSPC>, <&kp DEL>;
+ZMK_MOD_MORPH(bs_del_sym,
+    bindings = <&lt SYM BSPC>, <&kp DEL>;
 mods = <(MOD_LSFT | MOD_RSFT)>;
 )
 
@@ -93,11 +93,13 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
               tapping-term-ms = <TDANCE_TAP_MS>;)
 
 ZMK_COMBO(smart_num,  SMART_NUM,     LB0 LB1, DEF)  // smart_num, active on base
-ZMK_COMBO(copy,       &kp LG(C),     LB2 LB3, ALL)  // copy, active on all layers
-ZMK_COMBO(cut,        &kp LG(X),     LB1 LB3, ALL)  // cut, active on all layers
-ZMK_COMBO(paste,      &kp LG(V),     LB1 LB2, ALL)  // paste, active on all layers. Combo keys:
-ZMK_COMBO(alfred,     &kp LA(SPACE), RM0 RM1, ALL)  // alfred, active on all layers
-ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, ALL)  // vscode command palette, active on all layers
+ZMK_COMBO(copy,       &kp LG(C),     LB2 LB3, DEF)  // copy, active on base
+ZMK_COMBO(cut,        &kp LG(X),     LB1 LB3, DEF)  // cut, active on base
+ZMK_COMBO(paste,      &kp LG(V),     LB1 LB2, DEF)  // paste, active on base. Combo keys:
+ZMK_COMBO(alfred,     &kp LA(SPACE), RM0 RM1, DEF)  // alfred, active on base
+ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, DEF)  // vscode command palette, active on base
+ZMK_COMBO(undo,       &kp LG(Z),     RT0 RM0, DEF)  // undo, active on base
+ZMK_COMBO(redo,       &kp LG(LS(Z)), RB0 RM0, DEF)  // redo, active on base
 
 // define combos for accented characters
 // ZMK_COMBO(a_grave, &it_ag, LT4 LM4, DEF)  // à
@@ -108,8 +110,6 @@ ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, ALL)  // vscode command palette, a
 // ZMK_COMBO(u_grave, &it_ug, RT0 RT1, DEF)  // ù
 
 ZMK_COMBO(accent_grave_acute, &grave_acute, RB3 RM3, DEF)
-
-ZMK_CONDITIONAL_LAYER(func, NAV NUM, FUN) // Conditional layer for function keys, active when NAV and NUM layers are active
 
 &num_word {
   continue-list = <BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL SPACE LT GT DLLR COLON>;
@@ -125,7 +125,7 @@ ZMK_CONDITIONAL_LAYER(func, NAV NUM, FUN) // Conditional layer for function keys
          &kp Q      &kp W      &kp E        &kp R      &kp T          &kp Y          &kp U        &kp I          &kp O      &kp P
          &hml LCTRL A  &hml LALT S  &hml LSHFT D    &hml LGUI F  &kp G          &kp H          &hmr RGUI J    &hmr RSHFT K      &hmr RALT L  &hmr RCTRL SEMI
 &kp ESC  &kp Z      &kp X      &kp C        &kp V      &kp B          &kp N          &kp M        &kp COMMA      &kp DOT    &kp SLASH     &kp APOS
-                               &lt SYM TAB  &LS_caps   &kp SPACE      &lt NAV ENTER  &bs_del_num  &lt SYM RC(GRAVE)
+                               &kp TAB  &LS_caps   &lt NUM SPACE      &lt NAV ENTER  &bs_del_sym  &lt FUN RC(GRAVE)
             >;
         };
 
@@ -152,10 +152,10 @@ ______  &kp BSPC  &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______  ______
         sym_layer {
             display-name = "Sym";
             bindings = <
-        &kp STAR   &kp LT    &kp GT    &kp AMPS   &kp PLUS        &kp AT  &kp LBRC        &kp RBRC      &kp CARET       &kp TILDE
-        &kp FSLH   &kp GRAVE &kp EXCL  &kp PRCNT  &kp MINUS       &kp HASH   &hmr RGUI LPAR  &hmr RSHFT RPAR  &hmr RALT DQT  &hmr RCTRL SEMI
-______  &kp BSPC  &kp PIPE &kp LBKT  &kp RBKT   &kp EQUAL      &kp UNDER     &kp COLON       &kp COMMA     &kp DOT      &kp SLASH     &kp APOS
-                             ______    ______     ______         ______     ______          ______
+        &kp STAR   &kp LS(POUND)  &kp DLLR  &kp AMPS   &kp PLUS        &kp AT     &kp LBRC        &kp RBRC         &kp CARET      &kp TILDE
+        &kp FSLH   &kp GRAVE      &kp EXCL  &kp PRCNT  &kp MINUS       &kp HASH   &hmr RGUI LPAR  &hmr RSHFT RPAR  &hmr RALT DQT  &hmr RCTRL SEMI
+______  &kp BSPC   &kp PIPE       &kp LBKT  &kp RBKT   &kp EQUAL       &kp UNDER  &kp COLON       &kp LT           &kp GT         &kp QMARK    &kp APOS
+                                  ______    ______     ______          ______     ______          ______
             >;
         };
 
