@@ -92,24 +92,21 @@ ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
 ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
               tapping-term-ms = <TDANCE_TAP_MS>;)
 
-ZMK_COMBO(smart_num,  SMART_NUM,     LB0 LB1, DEF)  // smart_num, active on base
-ZMK_COMBO(copy,       &kp LG(C),     LB2 LB3, DEF)  // copy, active on base
-ZMK_COMBO(cut,        &kp LG(X),     LB1 LB3, DEF)  // cut, active on base
-ZMK_COMBO(paste,      &kp LG(V),     LB1 LB2, DEF)  // paste, active on base. Combo keys:
+ZMK_COMBO(smart_num,  SMART_NUM,     LM4 LB4, DEF)  // smart_num, active on base
+ZMK_COMBO(copy,       &kp LG(C),     LT0 LT1, ALL)  // copy, active on all layers
+ZMK_COMBO(cut,        &kp LG(X),     LT2 LM2, ALL)  // cut, active on all layers
+ZMK_COMBO(paste,      &kp LG(V),     LT1 LM1, ALL)  // paste, active on all layers
+ZMK_COMBO(clipboard,  &kp LA(LG(C)), LT3 LM3, ALL)  // clipboard, active on all layers
 ZMK_COMBO(alfred,     &kp LA(SPACE), RM0 RM1, DEF)  // alfred, active on base
 ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, DEF)  // vscode command palette, active on base
-ZMK_COMBO(undo,       &kp LG(Z),     RT0 RM0, DEF)  // undo, active on base
-ZMK_COMBO(redo,       &kp LG(LS(Z)), RB0 RM0, DEF)  // redo, active on base
+ZMK_COMBO(undo,       &kp LG(Z),     LT0 LM0, DEF)  // undo, active on base
+ZMK_COMBO(redo,       &kp LG(LS(Z)), LB0 LM0, DEF)  // redo, active on base
+ZMK_COMBO(undo_2,     &kp LG(Z),     RT0 RM0, DEF)  // undo, active on base
+ZMK_COMBO(redo_2,     &kp LG(LS(Z)), RB0 RM0, DEF)  // redo, active on base
+ZMK_COMBO(next_win,   &kp LG(GRAVE), LM1 LB1, DEF)  // next window, active on base
+ZMK_COMBO(save,       &kp LG(S), LM3 LB3, DEF)  // save, active on base
 
-// define combos for accented characters
-// ZMK_COMBO(a_grave, &it_ag, LT4 LM4, DEF)  // à
-// ZMK_COMBO(e_grave, &it_eg, LT3 LT2, DEF)  // è
-// ZMK_COMBO(e_acute, &it_ea, LT2 LT1, DEF)  // é
-// ZMK_COMBO(i_grave, &it_ig, RT1 RT2, DEF)  // ì
-// ZMK_COMBO(o_grave, &it_og, RT2 RT3, DEF)  // ò
-// ZMK_COMBO(u_grave, &it_ug, RT0 RT1, DEF)  // ù
-
-ZMK_COMBO(accent_grave_acute, &grave_acute, RB3 RM3, DEF)
+ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
 
 &num_word {
   continue-list = <BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL SPACE LT GT DLLR COLON>;
@@ -152,9 +149,9 @@ ______  &kp BSPC  &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______  ______
         sym_layer {
             display-name = "Sym";
             bindings = <
-        &kp STAR   &kp LS(POUND)  &kp DLLR  &kp AMPS   &kp PLUS        &kp AT     &kp LBRC        &kp RBRC         &kp CARET      &kp TILDE
-        &kp FSLH   &kp GRAVE      &kp EXCL  &kp PRCNT  &kp MINUS       &kp HASH   &hmr RGUI LPAR  &hmr RSHFT RPAR  &hmr RALT DQT  &hmr RCTRL SEMI
-______  &kp BSPC   &kp PIPE       &kp LBKT  &kp RBKT   &kp EQUAL       &kp UNDER  &kp COLON       &kp LT           &kp GT         &kp QMARK    &kp APOS
+        &kp STAR   &kp LS(POUND)  &kp DLLR  &kp AMPS   &kp PLUS        &kp HASH   &kp LBRC        &kp RBRC         &kp LBKT         &kp RBKT
+        &kp FSLH   &kp GRAVE      &kp EXCL  &kp PRCNT  &kp MINUS       &kp MINUS  &hmr RGUI LPAR  &hmr RSHFT RPAR  &hmr RALT COLON  &hmr RCTRL DQT
+______  &kp BSPC   &kp PIPE       &kp CARET &kp TILDE  &kp EQUAL       &kp UNDER  &kp AT          &kp LT           &kp GT           &kp QMARK    &kp GRAVE
                                   ______    ______     ______          ______     ______          ______
             >;
         };

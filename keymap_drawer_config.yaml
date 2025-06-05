@@ -242,6 +242,9 @@ parse_config:
     LG(V): $$tabler:clipboard-check$$ # Paste
     LG(C): $$tabler:clipboard-copy$$ # Copy
     LG(X): $$tabler:cut$$ # Cut
+    LA(LG(C)): $$tabler:clipboard-list$$ # Clipboard history
+    LG(GRAVE): $$tabler:app-window$$ # Next window
+    LG(S): $$tabler:device-floppy$$ # Save
 
     LG(Z): $$tabler:arrow-back-up$$ # Undo
     LG(LS(Z)):

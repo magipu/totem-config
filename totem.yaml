@@ -100,29 +100,29 @@ layers:
     - {type: trans}
     - {type: trans}
   Sym:
-  - ['*', £, $, '&', +, '@', '{', '}', ^, '~']
+  - ['*', £, $, '&', +, '#', '{', '}', '[', ']']
   - - /
     - '`'
     - '!'
     - '%'
     - '-'
-    - '#'
+    - '-'
     - {t: (, h: '$$mdi:apple-keyboard-command$$'}
     - {t: ), h: '$$mdi:apple-keyboard-shift$$'}
-    - {t: '"', h: '$$mdi:apple-keyboard-option$$'}
-    - {t: ;, h: '$$mdi:apple-keyboard-control$$'}
+    - {t: ':', h: '$$mdi:apple-keyboard-option$$'}
+    - {t: '"', h: '$$mdi:apple-keyboard-control$$'}
   - - {type: trans}
     - {t: '$$mdi:backspace$$', type: backspace}
     - '|'
-    - '['
-    - ']'
+    - ^
+    - '~'
     - '='
     - _
-    - ':'
+    - '@'
     - <
     - '>'
   - - '?'
-    - ''''
+    - '`'
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -169,23 +169,28 @@ layers:
     - {type: trans}
     - {type: held}
 combos:
-- p: [25, 24]
+- p: [10, 21]
   k: $$tabler:numbers$$
   l: [Base]
-- p: [23, 22]
+- p: [4, 3]
   k: $$tabler:clipboard-copy$$
-  l: [Base]
-- p: [24, 22]
+- p: [2, 12]
   k: $$tabler:cut$$
-  l: [Base]
-- p: [24, 23]
+- p: [3, 13]
   k: $$tabler:clipboard-check$$
-  l: [Base]
+- p: [1, 11]
+  k: $$tabler:clipboard-list$$
 - p: [15, 16]
   k: $$mdi:card-search$$
   l: [Base]
 - p: [14, 13]
   k: $$mdi:microsoft-visual-studio-code$$
+  l: [Base]
+- p: [4, 14]
+  k: $$tabler:arrow-back-up$$
+  l: [Base]
+- p: [25, 14]
+  k: $$tabler:arrow-forward-up$$
   l: [Base]
 - p: [5, 15]
   k: $$tabler:arrow-back-up$$
@@ -193,6 +198,12 @@ combos:
 - p: [26, 15]
   k: $$tabler:arrow-forward-up$$
   l: [Base]
-- p: [29, 18]
+- p: [13, 24]
+  k: $$tabler:app-window$$
+  l: [Base]
+- p: [11, 22]
+  k: $$tabler:device-floppy$$
+  l: [Base]
+- p: [27, 16]
   k: $$tabler:language$$
   l: [Base]
