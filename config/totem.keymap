@@ -119,40 +119,40 @@ ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
         base_layer {
             display-name = "Base";
             bindings = <
-         &kp Q      &kp W      &kp E        &kp R      &kp T          &kp Y          &kp U        &kp I          &kp O      &kp P
-         &hml LCTRL A  &hml LALT S  &hml LSHFT D    &hml LGUI F  &kp G          &kp H          &hmr RGUI J    &hmr RSHFT K      &hmr RALT L  &hmr RCTRL SEMI
-&kp ESC  &kp Z      &kp X      &kp C        &kp V      &kp B          &kp N          &kp M        &kp COMMA      &kp DOT    &kp SLASH     &kp APOS
-                               &kp TAB  &LS_caps   &lt NUM SPACE      &lt NAV ENTER  &bs_del_sym  &lt FUN RC(GRAVE)
+         &kp Q         &kp W        &kp E         &kp R        &kp T              &kp Y          &kp U        &kp I              &kp O        &kp P
+         &hml LCTRL A  &hml LALT S  &hml LSHFT D  &hml LGUI F  &kp G              &kp H          &hmr RGUI J  &hmr RSHFT K       &hmr RALT L  &hmr RCTRL SEMI
+&kp ESC  &kp Z         &kp X        &kp C         &kp V        &kp B              &kp N          &kp M        &kp COMMA          &kp DOT      &kp SLASH        &kp APOS
+                                    &kp TAB       &LS_caps     &lt NUM SPACE      &lt NAV ENTER  &bs_del_sym  &lt FUN RC(GRAVE)
             >;
         };
 
         nav_layer {
             display-name = "Nav";
             bindings = <
-        ______  ______  ______  ______  ______      &kp HOME      &kp PG_DN     &kp PG_UP   &kp END        ______
-        &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI    ______        &kp LEFT      &kp DOWN    &kp UP         &kp RIGHT  ______
-______  ______  ______  ______  ______  ______      &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  ______  ______
-                        ______  ______  ______      ______        ______        ______
+        ______     ______    ______     ______      ______        &kp HOME      &kp PG_DN     &kp PG_UP   &kp END        ______
+        &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI    ______        &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      ______
+______  ______     ______    ______     ______      ______        &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  ______  ______
+                             ______     ______      ______        ______        ______        ______
             >;
         };
 
         num_layer {
             display-name = "Num";
             bindings = <
-        &kp STAR  &kp N1  &kp N2  &kp N3   &kp PLUS       ______  ______  ______  ______  ______
+        &kp STAR  &kp N1  &kp N2  &kp N3   &kp PLUS       ______  ______          ______           ______    ______
         &kp FSLH  &kp N4  &kp N5  &kp N6   &kp MINUS      ______  &hmr RGUI LPAR  &hmr RSHFT RPAR  &kp RALT  &kp LCTRL
-______  &kp BSPC  &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______  ______  ______  ______  ______
-                             &kp N0  &kp DOT  ______      ______  ______  ______
+______  &kp BSPC  &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______          ______           ______    ______     ______
+                             &kp N0  &kp DOT  ______      ______  ______          ______
             >;
         };
 
         sym_layer {
             display-name = "Sym";
             bindings = <
-        &kp STAR   &kp LS(POUND)  &kp DLLR  &kp AMPS   &kp PLUS        &kp HASH   &kp LBRC        &kp RBRC         &kp LBKT         &kp RBKT
-        &kp FSLH   &kp GRAVE      &kp EXCL  &kp PRCNT  &kp MINUS       &kp MINUS  &hmr RGUI LPAR  &hmr RSHFT RPAR  &hmr RALT COLON  &hmr RCTRL DQT
-______  &kp BSPC   &kp PIPE       &kp CARET &kp TILDE  &kp EQUAL       &kp UNDER  &kp AT          &kp LT           &kp GT           &kp QMARK    &kp GRAVE
-                                  ______    ______     ______          ______     ______          ______
+        &kp STAR   &kp AT     &kp DLLR  &kp LS(POUND)   &kp DQT    &kp EQUAL       &kp LBRC        &kp LBKT         &kp LPAR         &kp RBKT
+        &kp PLUS   &kp HASH  &kp EXCL  &kp PRCNT  &kp PIPE       &kp MINUS  &hmr RGUI RBRC  &hmr RSHFT RBKT  &hmr RALT RPAR  &hmr RCTRL COLON
+______  &kp BSPC   &kp FSLH   &kp BSLH &kp TILDE  &kp AMPS       &kp UNDER  &kp QMARK          &kp LT           &kp GT           &kp CARET    &kp GRAVE
+                              ______    ______     ______          ______     ______          ______
             >;
         };
 
