@@ -35,7 +35,13 @@
 #define HOMEROW_TAP_MS    280
 #define TDANCE_TAP_MS     200
 #define QUICK_TAP_MS      175
-#define PRIOR_IDLE_MS     150
+#define PRIOR_IDLE_MS     175
+
+&lt {
+  flavor = "balanced";
+  tapping-term-ms = <200>;
+  quick-tap-ms = <QUICK_TAP_MS>;
+};
 
 /* Timeless homerow mods */
 // https://github.com/urob/zmk-config/tree/main#timeless-homerow-mods
