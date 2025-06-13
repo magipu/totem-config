@@ -333,4 +333,4 @@ parse_config:
         t: 'ù'
         s: 'Ù'
   zmk_preamble: '#define KEYMAP_DRAWER'
-  zmk_additional_includes: []
+  zmk_additional_includes: ['./config/zmk-helpers']

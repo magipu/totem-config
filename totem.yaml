@@ -56,7 +56,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
+    - $$mdi:keyboard-space$$
     - {type: held}
     - {type: trans}
     - {type: trans}
@@ -77,12 +77,12 @@ layers:
     - '6'
     - '-'
     - {type: trans}
-    - {t: (, h: '$$mdi:apple-keyboard-command$$'}
-    - {t: ), h: '$$mdi:apple-keyboard-shift$$'}
+    - $$mdi:apple-keyboard-command$$
+    - $$mdi:apple-keyboard-shift$$
     - $$mdi:apple-keyboard-option$$
     - $$mdi:apple-keyboard-control$$
   - - {type: trans}
-    - {t: '$$mdi:backspace$$', type: backspace}
+    - {type: trans}
     - '7'
     - '8'
     - '9'
@@ -97,25 +97,25 @@ layers:
     - .
     - {type: held}
     - {type: trans}
-    - {type: trans}
+    - {t: '$$mdi:backspace$$', type: backspace}
     - {type: trans}
   Sym:
-  - ['*', '@', $, £, '"', '=', '{', '[', (, ']']
-  - - +
-    - '#'
-    - '!'
-    - '%'
-    - '|'
+  - ['*', '@', $, £, '"', '=', '{', '[', (, '|']
+  - - $$mdi:apple-keyboard-control$$
+    - {t: '#', h: '$$mdi:apple-keyboard-option$$'}
+    - {t: '!', h: '$$mdi:apple-keyboard-shift$$'}
+    - {t: '%', h: '$$mdi:apple-keyboard-command$$'}
+    - ':'
     - '-'
     - {t: '}', h: '$$mdi:apple-keyboard-command$$'}
     - {t: ']', h: '$$mdi:apple-keyboard-shift$$'}
     - {t: ), h: '$$mdi:apple-keyboard-option$$'}
-    - {t: ':', h: '$$mdi:apple-keyboard-control$$'}
+    - {t: '~', h: '$$mdi:apple-keyboard-control$$'}
   - - {type: trans}
-    - {t: '$$mdi:backspace$$', type: backspace}
+    - {type: trans}
+    - +
     - /
     - \
-    - '~'
     - '&'
     - _
     - '?'
@@ -125,7 +125,7 @@ layers:
     - '`'
     - {type: trans}
     - {type: trans}
-    - {type: trans}
+    - $$mdi:keyboard-space$$
     - {type: trans}
     - {type: held}
     - {type: trans}
@@ -169,9 +169,6 @@ layers:
     - {type: trans}
     - {type: held}
 combos:
-- p: [10, 21]
-  k: $$tabler:numbers$$
-  l: [Base]
 - p: [4, 3]
   k: $$tabler:clipboard-copy$$
 - p: [2, 12]

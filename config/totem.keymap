@@ -86,13 +86,13 @@ ZMK_MOD_MORPH(grave_acute,
 )
 
 // Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
-#define SMART_NUM &smart_num NUM 0
-ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
-             tapping-term-ms = <TDANCE_TAP_MS>; quick-tap-ms = <QUICK_TAP_MS>;)
-ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
-              tapping-term-ms = <TDANCE_TAP_MS>;)
+// #define SMART_NUM &smart_num NUM 0
+// ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
+//              tapping-term-ms = <TDANCE_TAP_MS>; quick-tap-ms = <QUICK_TAP_MS>;)
+// ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
+//               tapping-term-ms = <TDANCE_TAP_MS>;)
 
-ZMK_COMBO(smart_num,  SMART_NUM,     LM4 LB4, DEF)  // smart_num, active on base
+// ZMK_COMBO(smart_num,  SMART_NUM,     LM4 LB4, DEF)  // smart_num, active on base
 ZMK_COMBO(copy,       &kp LG(C),     LT0 LT1, ALL)  // copy, active on all layers
 ZMK_COMBO(cut,        &kp LG(X),     LT2 LM2, ALL)  // cut, active on all layers
 ZMK_COMBO(paste,      &kp LG(V),     LT1 LM1, ALL)  // paste, active on all layers
@@ -132,27 +132,27 @@ ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
         ______     ______    ______     ______      ______        &kp HOME      &kp PG_DN     &kp PG_UP   &kp END        ______
         &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI    ______        &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      ______
 ______  ______     ______    ______     ______      ______        &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  ______  ______
-                             ______     ______      ______        ______        ______        ______
+                             ______     ______      &kp SPACE     ______        ______        ______
             >;
         };
 
         num_layer {
             display-name = "Num";
             bindings = <
-        &kp STAR  &kp N1  &kp N2  &kp N3   &kp PLUS       ______  ______          ______           ______    ______
-        &kp FSLH  &kp N4  &kp N5  &kp N6   &kp MINUS      ______  &hmr RGUI LPAR  &hmr RSHFT RPAR  &kp RALT  &kp LCTRL
-______  &kp BSPC  &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______          ______           ______    ______     ______
-                             &kp N0  &kp DOT  ______      ______  ______          ______
+        &kp STAR  &kp N1  &kp N2  &kp N3   &kp PLUS       ______  ______    ______     ______    ______
+        &kp FSLH  &kp N4  &kp N5  &kp N6   &kp MINUS      ______  &kp RGUI  &kp RSHFT  &kp RALT  &kp LCTRL
+______  ______    &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______    ______     ______    ______     ______
+                             &kp N0  &kp DOT  ______      ______  &kp BSPC  ______
             >;
         };
 
         sym_layer {
             display-name = "Sym";
             bindings = <
-        &kp STAR   &kp AT     &kp DLLR  &kp LS(POUND)   &kp DQT    &kp EQUAL       &kp LBRC        &kp LBKT         &kp LPAR         &kp RBKT
-        &kp PLUS   &kp HASH  &kp EXCL  &kp PRCNT  &kp PIPE       &kp MINUS  &hmr RGUI RBRC  &hmr RSHFT RBKT  &hmr RALT RPAR  &hmr RCTRL COLON
-______  &kp BSPC   &kp FSLH   &kp BSLH &kp TILDE  &kp AMPS       &kp UNDER  &kp QMARK          &kp LT           &kp GT           &kp CARET    &kp GRAVE
-                              ______    ______     ______          ______     ______          ______
+        &kp STAR   &kp  AT         &kp DLLR         &kp LS(POUND)    &kp DQT           &kp EQUAL  &kp LBRC        &kp LBKT         &kp LPAR        &kp PIPE
+        &kp LCTRL  &hml LALT NUHS  &hml LSHFT EXCL  &hml LGUI PRCNT  &kp COLON         &kp MINUS  &hmr RGUI RBRC  &hmr RSHFT RBKT  &hmr RALT RPAR  &hmr RCTRL TILDE
+______  ______     &kp  PLUS       &kp FSLH         &kp BSLH         &kp AMPS          &kp UNDER  &kp QMARK       &kp LT           &kp GT          &kp CARET         &kp GRAVE
+                                   ______           ______           &kp SPACE         ______     ______          ______
             >;
         };
 
