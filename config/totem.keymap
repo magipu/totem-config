@@ -72,7 +72,7 @@ ZMK_HOLD_TAP(qlt,
 
 // tap: backspace | shift + tap: delete | hold: num layer
 ZMK_MOD_MORPH(bs_del_sym,
-    bindings = <&lt SYM BSPC>, <&kp DEL>;
+    bindings = <&qlt SYM BSPC>, <&kp DEL>;
 mods = <(MOD_LSFT | MOD_RSFT)>;
 )
 
@@ -121,7 +121,7 @@ ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
 //   continue-list = <BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL SPACE LT GT DLLR COLON>;
 // };
 
-#define MACHASH = &kp LA(N3);
+#define MACHASH     &kp LA(N3);
 
 / {
     keymap {
