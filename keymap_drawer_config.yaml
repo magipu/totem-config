@@ -216,6 +216,7 @@ parse_config:
     NUHS: '#'
     TILDE2: '~'
     LS(POUND): '£'
+    LA(N3): '#'
 
     # Arrow keys
     UP: $$mdi:arrow-up-bold$$

@@ -121,7 +121,6 @@ ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
 //   continue-list = <BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL SPACE LT GT DLLR COLON>;
 // };
 
-#define MACHASH     &kp LA(N3);
 
 / {
     keymap {
@@ -160,10 +159,10 @@ ______  ______    &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______    ____
         sym_layer {
             display-name = "Sym";
             bindings = <
-        &kp STAR   &kp  AT            &kp DLLR         &kp LS(POUND)    &kp DQT           &kp EQUAL  &kp LBRC        &kp LBKT         &kp LPAR        &kp PIPE
-        &kp LCTRL  &hml LALT MACHASH  &hml LSHFT EXCL  &hml LGUI PRCNT  &kp COLON         &kp MINUS  &hmr RGUI RBRC  &hmr RSHFT RBKT  &hmr RALT RPAR  &hmr RCTRL TILDE
-______  ______     &kp  PLUS          &kp FSLH         &kp BSLH         &kp AMPS          &kp UNDER  &kp QMARK       &kp LT           &kp GT          &kp CARET         &kp GRAVE
-                                      ______           ______           &kp SPACE         ______     ______          ______
+        &kp STAR   &kp  AT           &kp DLLR         &kp LS(POUND)    &kp DQT           &kp EQUAL  &kp LBRC        &kp LBKT         &kp LPAR        &kp PIPE
+        &kp LCTRL  &hml LALT LA(N3)  &hml LSHFT EXCL  &hml LGUI PRCNT  &kp COLON         &kp MINUS  &hmr RGUI RBRC  &hmr RSHFT RBKT  &hmr RALT RPAR  &hmr RCTRL TILDE
+______  ______     &kp  PLUS         &kp FSLH         &kp BSLH         &kp AMPS          &kp UNDER  &kp QMARK       &kp LT           &kp GT          &kp CARET         &kp GRAVE
+                                     ______           ______           &kp SPACE         ______     ______          ______
             >;
         };
 
