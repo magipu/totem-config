@@ -16,11 +16,11 @@
 #define ZMK_HELPERS_KEEP_NATIVE    0
 
 #include <behaviors.dtsi>
-#include <behaviors/num_word.dtsi> // Requires auto-layer module.
+// #include <behaviors/num_word.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/totem.h"
-#include "zmk-helpers/unicode-chars/italian.dtsi"
+// #include "zmk-helpers/unicode-chars/italian.dtsi"
 
 #define ______ &trans
 
@@ -35,13 +35,7 @@
 #define HOMEROW_TAP_MS    280
 #define TDANCE_TAP_MS     200
 #define QUICK_TAP_MS      175
-#define PRIOR_IDLE_MS     175
-
-&lt {
-  flavor = "balanced";
-  tapping-term-ms = <200>;
-  quick-tap-ms = <QUICK_TAP_MS>;
-};
+#define PRIOR_IDLE_MS     150
 
 /* Timeless homerow mods */
 // https://github.com/urob/zmk-config/tree/main#timeless-homerow-mods
@@ -68,6 +62,14 @@ ZMK_HOLD_TAP(hmr,
     bindings = <&kp>, < &kp >;
 )
 
+ZMK_HOLD_TAP(qlt,
+    flavor = "balanced";
+    tapping-term-ms = <175>;
+    bindings = <&mo>, <&kp>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    display-name = "Quick Layer-Tap";
+)
+
 // tap: backspace | shift + tap: delete | hold: num layer
 ZMK_MOD_MORPH(bs_del_sym,
     bindings = <&lt SYM BSPC>, <&kp DEL>;
@@ -86,6 +88,7 @@ ZMK_TAP_DANCE(LS_caps,
     bindings = <&kp LSHIFT>, <&caps_word>;
 )
 
+// tap: grave accent | shift + tap: acute accent
 ZMK_MOD_MORPH(grave_acute,
     bindings = <&kp LA(GRAVE)>, <&kp LA(E)>;
     mods = <(MOD_LSFT | MOD_RSFT)>;
@@ -114,9 +117,11 @@ ZMK_COMBO(save,       &kp LG(S), LM3 LB3, DEF)  // save, active on base
 
 ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
 
-&num_word {
-  continue-list = <BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL SPACE LT GT DLLR COLON>;
-};
+// &num_word {
+//   continue-list = <BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL SPACE LT GT DLLR COLON>;
+// };
+
+#define MACHASH = &kp LA(N3);
 
 / {
     keymap {
@@ -128,7 +133,7 @@ ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
          &kp Q         &kp W        &kp E         &kp R        &kp T              &kp Y          &kp U        &kp I              &kp O        &kp P
          &hml LCTRL A  &hml LALT S  &hml LSHFT D  &hml LGUI F  &kp G              &kp H          &hmr RGUI J  &hmr RSHFT K       &hmr RALT L  &hmr RCTRL SEMI
 &kp ESC  &kp Z         &kp X        &kp C         &kp V        &kp B              &kp N          &kp M        &kp COMMA          &kp DOT      &kp SLASH        &kp APOS
-                                    &kp TAB       &LS_caps     &lt NUM SPACE      &lt NAV ENTER  &bs_del_sym  &lt FUN RC(GRAVE)
+                                    &kp TAB       &LS_caps     &qlt NUM SPACE     &lt NAV ENTER  &bs_del_sym  &qlt FUN RC(GRAVE)
             >;
         };
 
@@ -155,10 +160,10 @@ ______  ______    &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______    ____
         sym_layer {
             display-name = "Sym";
             bindings = <
-        &kp STAR   &kp  AT         &kp DLLR         &kp LS(POUND)    &kp DQT           &kp EQUAL  &kp LBRC        &kp LBKT         &kp LPAR        &kp PIPE
-        &kp LCTRL  &hml LALT NUHS  &hml LSHFT EXCL  &hml LGUI PRCNT  &kp COLON         &kp MINUS  &hmr RGUI RBRC  &hmr RSHFT RBKT  &hmr RALT RPAR  &hmr RCTRL TILDE
-______  ______     &kp  PLUS       &kp FSLH         &kp BSLH         &kp AMPS          &kp UNDER  &kp QMARK       &kp LT           &kp GT          &kp CARET         &kp GRAVE
-                                   ______           ______           &kp SPACE         ______     ______          ______
+        &kp STAR   &kp  AT            &kp DLLR         &kp LS(POUND)    &kp DQT           &kp EQUAL  &kp LBRC        &kp LBKT         &kp LPAR        &kp PIPE
+        &kp LCTRL  &hml LALT MACHASH  &hml LSHFT EXCL  &hml LGUI PRCNT  &kp COLON         &kp MINUS  &hmr RGUI RBRC  &hmr RSHFT RBKT  &hmr RALT RPAR  &hmr RCTRL TILDE
+______  ______     &kp  PLUS          &kp FSLH         &kp BSLH         &kp AMPS          &kp UNDER  &kp QMARK       &kp LT           &kp GT          &kp CARET         &kp GRAVE
+                                      ______           ______           &kp SPACE         ______     ______          ______
             >;
         };
 
