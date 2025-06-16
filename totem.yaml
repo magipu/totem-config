@@ -15,12 +15,12 @@ layers:
   - ['$$mdi:keyboard-esc$$', Z, X, C, V, B, N, M, ',', .]
   - - /
     - ''''
-    - $$mdi:keyboard-tab$$
+    - {t: '$$mdi:keyboard-tab$$', h: Fun}
     - $$mdi:apple-keyboard-shift$$
-    - {t: '$$mdi:keyboard-space$$', h: Num}
+    - $$mdi:keyboard-space$$
     - {t: '$$mdi:keyboard-return$$', h: Nav}
     - {t: '$$mdi:backspace$$', h: Sym, s: '$$mdi:backspace-reverse-outline$$'}
-    - {t: '$$tabler:terminal$$', h: Fun}
+    - {t: '$$tabler:terminal$$', h: Num}
   Nav:
   - - {type: trans}
     - {type: trans}
@@ -95,10 +95,10 @@ layers:
     - {type: trans}
     - '0'
     - .
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {type: held}
-    - {type: trans}
-    - {t: '$$mdi:backspace$$', type: backspace}
-    - {type: trans}
   Sym:
   - ['*', '@', $, £, '"', '=', '{', '[', (, '|']
   - - $$mdi:apple-keyboard-control$$
@@ -162,13 +162,16 @@ layers:
     - {type: trans}
   - - $$mdi:close-box$$
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
     - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
 combos:
+- p: [26, 27]
+  k: $$tabler:numbers$$
+  l: [Num]
 - p: [4, 3]
   k: $$tabler:clipboard-copy$$
 - p: [2, 12]

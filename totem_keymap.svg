@@ -340,6 +340,26 @@
   <path d="M19.1 18h-6.2" />
 </svg>
 </svg>
+<svg id="tabler:numbers">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-numbers"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 10v-7l-2 2" />
+  <path d="M6 16a2 2 0 1 1 4 0c0 .591 -.601 1.46 -1 2l-3 3h4" />
+  <path d="M15 14a2 2 0 1 0 2 -2a2 2 0 1 0 -2 -2" />
+  <path d="M6.5 10h3" />
+</svg>
+</svg>
 <svg id="tabler:terminal">
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -626,7 +646,9 @@ path.combo {
 <g transform="translate(255, 236)" class="key keypos-32">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-tab"/>
-</g>
+<a href="#Fun">
+<text x="0" y="24" class="key hold layer-activator">Fun</text>
+</a></g>
 <g transform="translate(320, 245) rotate(15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-shift"/>
@@ -634,9 +656,7 @@ path.combo {
 <g transform="translate(381, 270) rotate(30.0)" class="key keypos-34">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-space"/>
-<a href="#Num">
-<text x="0" y="24" class="key hold layer-activator">Num</text>
-</a></g>
+</g>
 <g transform="translate(470, 270) rotate(-30.0)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-return"/>
@@ -653,8 +673,8 @@ path.combo {
 <g transform="translate(596, 236)" class="key keypos-37">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <use href="#tabler:terminal" xlink:href="#tabler:terminal" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:terminal"/>
-<a href="#Fun">
-<text x="0" y="24" class="key hold layer-activator">Fun</text>
+<a href="#Num">
+<text x="0" y="24" class="key hold layer-activator">Num</text>
 </a></g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="287" y="47" width="28" height="26" class="combo"/>
@@ -987,32 +1007,35 @@ path.combo {
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">.</text>
 </g>
-<g transform="translate(381, 270) rotate(30.0)" class="key held keypos-34">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key held"/>
+<g transform="translate(381, 270) rotate(30.0)" class="key trans keypos-34">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 </g>
 <g transform="translate(470, 270) rotate(-30.0)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 </g>
-<g transform="translate(531, 245) rotate(-15.0)" class="key backspace keypos-36">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key backspace"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-7" y="-7" height="14" width="14.0" class="key backspace tap glyph mdi:backspace"/>
-</g>
-<g transform="translate(596, 236)" class="key trans keypos-37">
+<g transform="translate(531, 245) rotate(-15.0)" class="key trans keypos-36">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 </g>
+<g transform="translate(596, 236)" class="key held keypos-37">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key held"/>
+</g>
 <g class="combo combopos-0">
+<rect rx="6" ry="6" x="536" y="159" width="28" height="26" class="combo"/>
+<use href="#tabler:numbers" xlink:href="#tabler:numbers" x="543" y="165" height="14" width="14.0" class="combo tap glyph tabler:numbers"/>
+</g>
+<g class="combo combopos-1">
 <rect rx="6" ry="6" x="287" y="47" width="28" height="26" class="combo"/>
 <use href="#tabler:clipboard-copy" xlink:href="#tabler:clipboard-copy" x="294" y="53" height="14" width="14.0" class="combo tap glyph tabler:clipboard-copy"/>
 </g>
-<g class="combo combopos-1">
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="198" y="43" width="28" height="26" class="combo"/>
 <use href="#tabler:cut" xlink:href="#tabler:cut" x="205" y="49" height="14" width="14.0" class="combo tap glyph tabler:cut"/>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="257" y="71" width="28" height="26" class="combo"/>
 <use href="#tabler:clipboard-check" xlink:href="#tabler:clipboard-check" x="264" y="77" height="14" width="14.0" class="combo tap glyph tabler:clipboard-check"/>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="132" y="77" width="28" height="26" class="combo"/>
 <use href="#tabler:clipboard-list" xlink:href="#tabler:clipboard-list" x="139" y="83" height="14" width="14.0" class="combo tap glyph tabler:clipboard-list"/>
 </g>
@@ -1315,8 +1338,8 @@ path.combo {
 <g transform="translate(817, 209) rotate(10.0)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 </g>
-<g transform="translate(255, 236)" class="key trans keypos-32">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
+<g transform="translate(255, 236)" class="key held keypos-32">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key held"/>
 </g>
 <g transform="translate(320, 245) rotate(15.0)" class="key trans keypos-33">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
@@ -1330,8 +1353,8 @@ path.combo {
 <g transform="translate(531, 245) rotate(-15.0)" class="key trans keypos-36">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 </g>
-<g transform="translate(596, 236)" class="key held keypos-37">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key held"/>
+<g transform="translate(596, 236)" class="key trans keypos-37">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="287" y="47" width="28" height="26" class="combo"/>
