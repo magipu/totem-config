@@ -110,10 +110,12 @@ ZMK_COMBO(redo_2,     &kp LG(LS(Z)), RB0 RM0, DEF)  // redo, active on base
 ZMK_COMBO(next_win,   &kp LG(GRAVE), LM1 LB1, DEF LH)  // next window, active on base
 ZMK_COMBO(save,       &kp LG(S), LM3 LB3, DEF LH)  // save, active on base
 
-// combo to toggle the LH layer
-ZMK_COMBO(toggle_lh, &tog LH, LB5 LH2, DEF)  // toggle left hand layer, active on base
-
 ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
+
+ZMK_TAP_DANCE(ESC_LH,
+    tapping-term-ms = <TDANCE_TAP_MS>;
+    bindings = <&kp ESC>, <&tog LH>;
+)
 
 &num_word {
   continue-list = <BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL SPACE LT GT DLLR COLON>;
@@ -129,7 +131,7 @@ ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
             bindings = <
          &kp Q         &kp W        &kp E         &kp R         &kp T              &kp Y          &kp U        &kp I              &kp O        &kp P
          &hml LCTRL A  &hml LALT S  &hml LSHFT D  &hml LGUI F   &kp G              &kp H          &hmr RGUI J  &hmr RSHFT K       &hmr RALT L  &hmr RCTRL SEMI
-&kp ESC  &kp Z         &kp X        &kp C         &kp V         &kp B              &kp N          &kp M        &kp COMMA          &kp DOT      &kp SLASH        &kp APOS
+&ESC_LH  &kp Z         &kp X        &kp C         &kp V         &kp B              &kp N          &kp M        &kp COMMA          &kp DOT      &kp SLASH        &kp APOS
                                     &LS_caps      &qlt NUM TAB  &kp SPACE          &lt NAV ENTER  &bs_del_sym  &qlt FUN RC(GRAVE)
             >;
         };
@@ -179,8 +181,8 @@ ______  ______     &kp  PLUS         &kp FSLH         &kp BSLH         &kp AMPS 
             bindings = <
         ______     &kp LG(W) ______     ______         ______         ______  ______  ______  ______  ______
         &kp LCTRL  &kp LALT &kp LSHFT  &kp LGUI       ______         ______  ______  ______  ______  ______
-&tog LH  ______     ______    ______     &kp LG(A)      ______         ______  ______  ______  ______  ______  ______
-                             ______     &qlt NUM BSPC  &kp SPACE      ______  ______  ______
+______  ______   &kp LG(A)  ______    ______          &kp ENTER         ______  ______  ______  ______  ______  ______
+                             &kp TAB   &qlt NUM BSPC  &kp SPACE      ______  ______  ______
             >;
         };
     };

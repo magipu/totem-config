@@ -12,7 +12,7 @@ layers:
     - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
     - {t: L, h: '$$mdi:apple-keyboard-option$$'}
     - {t: ;, h: '$$mdi:apple-keyboard-control$$'}
-  - ['$$mdi:keyboard-esc$$', Z, X, C, V, B, N, M, ',', .]
+  - ['&ESC_LH', Z, X, C, V, B, N, M, ',', .]
   - - /
     - ''''
     - $$mdi:apple-keyboard-shift$$
@@ -189,19 +189,19 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-  - - {t: LH, h: toggle}
-    - {type: trans}
-    - {type: trans}
+  - - {type: trans}
     - {type: trans}
     - Cmd+A
     - {type: trans}
+    - {type: trans}
+    - {t: '$$mdi:keyboard-return$$', type: enter}
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
   - - {type: trans}
     - {type: trans}
-    - {type: trans}
+    - $$mdi:keyboard-tab$$
     - {t: '$$mdi:backspace$$', h: Num}
     - $$mdi:keyboard-space$$
     - {type: trans}
@@ -243,9 +243,6 @@ combos:
 - p: [11, 22]
   k: $$tabler:device-floppy$$
   l: [Base, LH]
-- p: [20, 32]
-  k: {t: LH, h: toggle}
-  l: [Base]
 - p: [27, 16]
   k: $$tabler:language$$
   l: [Base]
