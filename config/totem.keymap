@@ -29,6 +29,7 @@
 #define NUM   2
 #define SYM   3
 #define FUN   4
+#define LH    5
 
 /* Timing constants */
 
@@ -109,6 +110,9 @@ ZMK_COMBO(redo_2,     &kp LG(LS(Z)), RB0 RM0, DEF)  // redo, active on base
 ZMK_COMBO(next_win,   &kp LG(GRAVE), LM1 LB1, DEF)  // next window, active on base
 ZMK_COMBO(save,       &kp LG(S), LM3 LB3, DEF)  // save, active on base
 
+// combo to toggle the LH layer
+ZMK_COMBO(toggle_lh, &tog LH, LB5 LH2, DEF)  // toggle left hand layer, active on base
+
 ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
 
 &num_word {
@@ -123,10 +127,10 @@ ZMK_COMBO(accent_grave_acute, &grave_acute, RB1 RM1, DEF)
         base_layer {
             display-name = "Base";
             bindings = <
-         &kp Q         &kp W        &kp E         &kp R        &kp T              &kp Y          &kp U        &kp I              &kp O        &kp P
-         &hml LCTRL A  &hml LALT S  &hml LSHFT D  &hml LGUI F  &kp G              &kp H          &hmr RGUI J  &hmr RSHFT K       &hmr RALT L  &hmr RCTRL SEMI
-&kp ESC  &kp Z         &kp X        &kp C         &kp V        &kp B              &kp N          &kp M        &kp COMMA          &kp DOT      &kp SLASH        &kp APOS
-                                    &qlt FUN TAB  &LS_caps     &kp SPACE          &lt NAV ENTER  &bs_del_sym  &qlt NUM RC(GRAVE)
+         &kp Q         &kp W        &kp E         &kp R         &kp T              &kp Y          &kp U        &kp I              &kp O        &kp P
+         &hml LCTRL A  &hml LALT S  &hml LSHFT D  &hml LGUI F   &kp G              &kp H          &hmr RGUI J  &hmr RSHFT K       &hmr RALT L  &hmr RCTRL SEMI
+&kp ESC  &kp Z         &kp X        &kp C         &kp V         &kp B              &kp N          &kp M        &kp COMMA          &kp DOT      &kp SLASH        &kp APOS
+                                    &LS_caps      &qlt NUM TAB  &kp SPACE          &lt NAV ENTER  &bs_del_sym  &qlt FUN RC(GRAVE)
             >;
         };
 
@@ -143,10 +147,10 @@ ______  ______     ______    ______     ______      ______        &kp LA(LEFT)  
         num_layer {
             display-name = "Num";
             bindings = <
-        &kp STAR  &kp N1  &kp N2  &kp N3   &kp PLUS       ______  ______    ______     ______    ______
-        &kp FSLH  &kp N4  &kp N5  &kp N6   &kp MINUS      ______  &kp RGUI  &kp RSHFT  &kp RALT  &kp LCTRL
-______  ______    &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______    ______     ______    ______     ______
-                             &kp N0  &kp DOT  ______      ______  ______    ______
+         &kp STAR  &kp N1  &kp N2  &kp N3   &kp PLUS       ______  ______    ______     ______    ______
+         &kp FSLH  &kp N4  &kp N5  &kp N6   &kp MINUS      ______  &kp RGUI  &kp RSHFT  &kp RALT  &kp RCTRL
+&kp DOT  &kp N0    &kp N7  &kp N8  &kp N9   &kp EQUAL      ______  ______    ______     ______    ______     ______
+                               ______  ______  ______      ______  ______    ______
             >;
         };
 
@@ -167,6 +171,16 @@ ______  ______     &kp  PLUS         &kp FSLH         &kp BSLH         &kp AMPS 
                 ______       &kp F5  &kp F6   &kp F7   &kp F8       &kp C_PREV    &kp C_PP      &kp C_NEXT  ______  &kp C_AL_LOCK
 &studio_unlock  ______       &kp F9  &kp F10  &kp F11  &kp F12      &kp C_BRI_UP  &kp C_BRI_DN  ______      ______  &kp K_CANCEL   ______
                                      ______   ______   ______       ______        ______        ______
+            >;
+        };
+
+        lh_layer {
+            display-name = "LH";
+            bindings = <
+        ______     &kp LG(W) ______     ______         ______         ______  ______  ______  ______  ______
+        &kp LCTRL  &kp LALT &kp LSHFT  &kp LGUI       ______         ______  ______  ______  ______  ______
+______  ______     ______    ______     &kp LG(A)      ______         ______  ______  ______  ______  ______  ______
+                             ______     &qlt NUM BSPC  &kp SPACE      ______  ______  ______
             >;
         };
     };

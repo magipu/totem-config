@@ -15,12 +15,12 @@ layers:
   - ['$$mdi:keyboard-esc$$', Z, X, C, V, B, N, M, ',', .]
   - - /
     - ''''
-    - {t: '$$mdi:keyboard-tab$$', h: Fun}
     - $$mdi:apple-keyboard-shift$$
+    - {t: '$$mdi:keyboard-tab$$', h: Num}
     - $$mdi:keyboard-space$$
     - {t: '$$mdi:keyboard-return$$', h: Nav}
     - {t: '$$mdi:backspace$$', h: Sym, s: '$$mdi:backspace-reverse-outline$$'}
-    - {t: '$$tabler:terminal$$', h: Num}
+    - {t: '$$tabler:terminal$$', h: Fun}
   Nav:
   - - {type: trans}
     - {type: trans}
@@ -81,8 +81,8 @@ layers:
     - $$mdi:apple-keyboard-shift$$
     - $$mdi:apple-keyboard-option$$
     - $$mdi:apple-keyboard-control$$
-  - - {type: trans}
-    - {type: trans}
+  - - .
+    - '0'
     - '7'
     - '8'
     - '9'
@@ -93,12 +93,12 @@ layers:
     - {type: trans}
   - - {type: trans}
     - {type: trans}
-    - '0'
-    - .
-    - {type: trans}
-    - {type: trans}
     - {type: trans}
     - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
   Sym:
   - ['*', '@', $, £, '"', '=', '{', '[', (, '|']
   - - $$mdi:apple-keyboard-control$$
@@ -162,9 +162,48 @@ layers:
     - {type: trans}
   - - $$mdi:close-box$$
     - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {type: held}
+  LH:
+  - - {type: trans}
+    - Cmd+W
     - {type: trans}
     - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - $$mdi:apple-keyboard-control$$
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-shift$$
+    - $$mdi:apple-keyboard-command$$
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Cmd+A
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {t: '$$mdi:backspace$$', h: Num}
+    - $$mdi:keyboard-space$$
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -203,6 +242,9 @@ combos:
   l: [Base]
 - p: [11, 22]
   k: $$tabler:device-floppy$$
+  l: [Base]
+- p: [20, 32]
+  k: {t: LH, h: toggle}
   l: [Base]
 - p: [27, 16]
   k: $$tabler:language$$
