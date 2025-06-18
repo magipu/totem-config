@@ -103,12 +103,12 @@ ZMK_COMBO(paste,      &kp LG(V),     LT1 LM1, ALL)  // paste, active on all laye
 ZMK_COMBO(clipboard,  &kp LA(LG(C)), LT3 LM3, ALL)  // clipboard, active on all layers
 ZMK_COMBO(alfred,     &kp LA(SPACE), RM0 RM1, DEF)  // alfred, active on base
 ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, DEF)  // vscode command palette, active on base
-ZMK_COMBO(undo,       &kp LG(Z),     LT0 LM0, DEF)  // undo, active on base
-ZMK_COMBO(redo,       &kp LG(LS(Z)), LB0 LM0, DEF)  // redo, active on base
+ZMK_COMBO(undo,       &kp LG(Z),     LT0 LM0, DEF LH)  // undo, active on base
+ZMK_COMBO(redo,       &kp LG(LS(Z)), LB0 LM0, DEF LH)  // redo, active on base
 ZMK_COMBO(undo_2,     &kp LG(Z),     RT0 RM0, DEF)  // undo, active on base
 ZMK_COMBO(redo_2,     &kp LG(LS(Z)), RB0 RM0, DEF)  // redo, active on base
-ZMK_COMBO(next_win,   &kp LG(GRAVE), LM1 LB1, DEF)  // next window, active on base
-ZMK_COMBO(save,       &kp LG(S), LM3 LB3, DEF)  // save, active on base
+ZMK_COMBO(next_win,   &kp LG(GRAVE), LM1 LB1, DEF LH)  // next window, active on base
+ZMK_COMBO(save,       &kp LG(S), LM3 LB3, DEF LH)  // save, active on base
 
 // combo to toggle the LH layer
 ZMK_COMBO(toggle_lh, &tog LH, LB5 LH2, DEF)  // toggle left hand layer, active on base
@@ -179,7 +179,7 @@ ______  ______     &kp  PLUS         &kp FSLH         &kp BSLH         &kp AMPS 
             bindings = <
         ______     &kp LG(W) ______     ______         ______         ______  ______  ______  ______  ______
         &kp LCTRL  &kp LALT &kp LSHFT  &kp LGUI       ______         ______  ______  ______  ______  ______
-______  ______     ______    ______     &kp LG(A)      ______         ______  ______  ______  ______  ______  ______
+&tog LH  ______     ______    ______     &kp LG(A)      ______         ______  ______  ______  ______  ______  ______
                              ______     &qlt NUM BSPC  &kp SPACE      ______  ______  ______
             >;
         };

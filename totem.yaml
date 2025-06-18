@@ -189,7 +189,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-  - - {type: trans}
+  - - {t: LH, h: toggle}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -227,10 +227,10 @@ combos:
   l: [Base]
 - p: [4, 14]
   k: $$tabler:arrow-back-up$$
-  l: [Base]
+  l: [Base, LH]
 - p: [25, 14]
   k: $$tabler:arrow-forward-up$$
-  l: [Base]
+  l: [Base, LH]
 - p: [5, 15]
   k: $$tabler:arrow-back-up$$
   l: [Base]
@@ -239,10 +239,10 @@ combos:
   l: [Base]
 - p: [13, 24]
   k: $$tabler:app-window$$
-  l: [Base]
+  l: [Base, LH]
 - p: [11, 22]
   k: $$tabler:device-floppy$$
-  l: [Base]
+  l: [Base, LH]
 - p: [20, 32]
   k: {t: LH, h: toggle}
   l: [Base]

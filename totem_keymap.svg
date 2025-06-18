@@ -1450,8 +1450,11 @@ path.combo {
 <g transform="translate(764, 168) rotate(10.0)" class="key trans keypos-19">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
 </g>
-<g transform="translate(34, 209) rotate(-10.0)" class="key trans keypos-20">
-<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
+<g transform="translate(34, 209) rotate(-10.0)" class="key keypos-20">
+<rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
+<a href="#LH">
+<text x="0" y="0" class="key tap layer-activator">LH</text>
+</a><text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(97, 223) rotate(-10.0)" class="key trans keypos-21">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key trans"/>
@@ -1524,6 +1527,22 @@ path.combo {
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="132" y="77" width="28" height="26" class="combo"/>
 <use href="#tabler:clipboard-list" xlink:href="#tabler:clipboard-list" x="139" y="83" height="14" width="14.0" class="combo tap glyph tabler:clipboard-list"/>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="316" y="80" width="28" height="26" class="combo"/>
+<use href="#tabler:arrow-back-up" xlink:href="#tabler:arrow-back-up" x="323" y="86" height="14" width="14.0" class="combo tap glyph tabler:arrow-back-up"/>
+</g>
+<g class="combo combopos-5">
+<rect rx="6" ry="6" x="316" y="136" width="28" height="26" class="combo"/>
+<use href="#tabler:arrow-forward-up" xlink:href="#tabler:arrow-forward-up" x="323" y="142" height="14" width="14.0" class="combo tap glyph tabler:arrow-forward-up"/>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="257" y="127" width="28" height="26" class="combo"/>
+<use href="#tabler:app-window" xlink:href="#tabler:app-window" x="264" y="133" height="14" width="14.0" class="combo tap glyph tabler:app-window"/>
+</g>
+<g class="combo combopos-7">
+<rect rx="6" ry="6" x="136" y="133" width="28" height="26" class="combo"/>
+<use href="#tabler:device-floppy" xlink:href="#tabler:device-floppy" x="143" y="139" height="14" width="14.0" class="combo tap glyph tabler:device-floppy"/>
 </g>
 </g>
 </g>
