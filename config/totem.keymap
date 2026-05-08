@@ -101,7 +101,7 @@ ZMK_COMBO(copy,       &kp LG(C),     LT0 LT1, ALL)  // copy, active on all layer
 ZMK_COMBO(cut,        &kp LG(X),     LT2 LM2, ALL)  // cut, active on all layers
 ZMK_COMBO(paste,      &kp LG(V),     LT1 LM1, ALL)  // paste, active on all layers
 ZMK_COMBO(clipboard,  &kp LA(LG(C)), LT3 LM3, ALL)  // clipboard, active on all layers
-ZMK_COMBO(alfred,     &kp LA(SPACE), RM0 RM1, DEF)  // alfred, active on base
+ZMK_COMBO(spotlight,  &kp LG(SPACE), RM0 RM1, DEF)  // spotlight, active on base
 ZMK_COMBO(vscode_cmd, &kp LS(LG(P)), LM0 LM1, DEF)  // vscode command palette, active on base
 ZMK_COMBO(undo,       &kp LG(Z),     LT0 LM0, DEF LH)  // undo, active on base
 ZMK_COMBO(redo,       &kp LG(LS(Z)), LB0 LM0, DEF LH)  // redo, active on base
