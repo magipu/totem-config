@@ -220,7 +220,7 @@ combos:
 - p: [1, 11]
   k: $$tabler:clipboard-list$$
 - p: [15, 16]
-  k: $$mdi:card-search$$
+  k: Cmd+$$mdi:keyboard-space$$
   l: [Base]
 - p: [14, 13]
   k: $$mdi:microsoft-visual-studio-code$$
