@@ -3,3 +3,37 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+  draw-keymap:
+    if: github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip ci]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: Install keymap-drawer
+        run: pip install -r requirements.txt
+
+      - name: Generate keymap SVG
+        run: |
+          keymap -c ./keymap_drawer_config.yaml parse -c 10 -z ./config/totem.keymap > totem.yaml
+          keymap -c ./keymap_drawer_config.yaml draw -k totem totem.yaml > totem_keymap.svg
+
+      - name: Commit updated SVG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add totem_keymap.svg totem.yaml
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: auto-update keymap SVG [skip ci]"
+            git push
+          fi
