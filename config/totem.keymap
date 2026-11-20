@@ -101,13 +101,6 @@ ACCENT(i_grave, LA(GRAVE), I)  // ì Ì
 ACCENT(o_grave, LA(GRAVE), O)  // ò Ò
 ACCENT(u_grave, LA(GRAVE), U)  // ù Ù
 
-// Fun layer F4 key: tap: F4 | double-tap: area screenshot (Shottr owns Cmd+Shift+4)
-ZMK_TAP_DANCE(f4_shot,
-    tapping-term-ms = <TDANCE_TAP_MS>;
-    bindings = <&kp F4>, <&kp LS(LG(N4))>;
-)
-
-// Claude Code: double Esc (rewind). The Esc key's own double-tap toggles LH instead.
 // Select layer actions: do the thing, then return to base
 #define SEL_EXIT(name, key) \
     ZMK_MACRO(name, wait-ms = <0>; tap-ms = <20>; bindings = <&kp key>, <&to DEF>;)
@@ -123,6 +116,7 @@ ZMK_MACRO(term_copy, wait-ms = <0>; tap-ms = <20>; bindings = <&kp Y>, <&to DEF>
 ZMK_MACRO(term_esc,  wait-ms = <0>; tap-ms = <20>; bindings = <&kp ESC>, <&to DEF>;)
 ZMK_MACRO(vim_top,   wait-ms = <0>; tap-ms = <20>; bindings = <&kp G>, <&kp G>;)
 
+// Claude Code: double Esc (rewind). The Esc key's own double-tap toggles LH instead.
 ZMK_MACRO(esc_esc,
     wait-ms = <30>;
     tap-ms = <20>;
@@ -149,6 +143,7 @@ ZMK_COMBO(undo_2,     &kp LG(Z),     RT0 RM0, DEF)  // undo, active on base
 ZMK_COMBO(redo_2,     &kp LG(LS(Z)), RB0 RM0, DEF)  // redo, active on base
 ZMK_COMBO(next_win,   &kp LG(GRAVE), LM1 LB1, DEF LH)  // next window, active on base
 ZMK_COMBO(save,       &kp LG(S), LM3 LB3, DEF LH)  // save, active on base
+ZMK_COMBO(screenshot, &kp LS(LG(N4)), LM2 LB2, DEF LH)  // area screenshot (Shottr owns Cmd+Shift+4)
 
 // tap J+M, then a vowel: à è ì ò ù, and D (under E) for é
 ZMK_COMBO(accents,    &sl ACC,   RB1 RM1, DEF)
@@ -221,7 +216,7 @@ ______  ______     &kp  PLUS         &kp FSLH         &kp BSLH         &kp AMPS 
         fun_layer {
             display-name = "Fun";
             bindings = <
-                &bootloader  &kp F1  &kp F2   &kp F3   &f4_shot     &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  ______  &kp C_POWER
+                &bootloader  &kp F1  &kp F2   &kp F3   &kp F4       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  ______  &kp C_POWER
                 ______       &kp F5  &kp F6   &kp F7   &kp F8       &kp C_PREV    &kp C_PP      &kp C_NEXT  ______  &kp C_AL_LOCK
 &studio_unlock  ______       &kp F9  &kp F10  &kp F11  &kp F12      &kp C_BRI_UP  &kp C_BRI_DN  ______      ______  &kp K_CANCEL   ______
                                      ______   ______   ______       ______        ______        ______

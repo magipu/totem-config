@@ -376,6 +376,31 @@
   <path d="M6.5 10h3" />
 </svg>
 </svg>
+<svg id="tabler:screenshot">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-screenshot"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M7 19a2 2 0 0 1 -2 -2" />
+  <path d="M5 13v-2" />
+  <path d="M5 7a2 2 0 0 1 2 -2" />
+  <path d="M11 5h2" />
+  <path d="M17 5a2 2 0 0 1 2 2" />
+  <path d="M19 11v2" />
+  <path d="M19 17v4" />
+  <path d="M21 19h-4" />
+  <path d="M13 19h-2" />
+</svg>
+</svg>
 <svg id="tabler:select">
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -759,6 +784,10 @@ path.combo {
 <use href="#tabler:device-floppy" xlink:href="#tabler:device-floppy" x="143" y="139" height="14" width="14.0" class="combo tap glyph tabler:device-floppy"/>
 </g>
 <g class="combo combopos-12">
+<rect rx="6" ry="6" x="198" y="99" width="28" height="26" class="combo"/>
+<use href="#tabler:screenshot" xlink:href="#tabler:screenshot" x="205" y="105" height="14" width="14.0" class="combo tap glyph tabler:screenshot"/>
+</g>
+<g class="combo combopos-13">
 <rect rx="6" ry="6" x="566" y="127" width="28" height="26" class="combo"/>
 <text x="580" y="140" class="combo tap">àèé</text>
 </g>
@@ -1286,7 +1315,6 @@ path.combo {
 <g transform="translate(330, 65)" class="key keypos-4">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
 <text x="0" y="0" class="key tap">F4</text>
-<text x="0" y="24" class="key hold">2× shot</text>
 </g>
 <g transform="translate(520, 65)" class="key keypos-5">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
@@ -1585,6 +1613,10 @@ path.combo {
 <g class="combo combopos-7">
 <rect rx="6" ry="6" x="136" y="133" width="28" height="26" class="combo"/>
 <use href="#tabler:device-floppy" xlink:href="#tabler:device-floppy" x="143" y="139" height="14" width="14.0" class="combo tap glyph tabler:device-floppy"/>
+</g>
+<g class="combo combopos-8">
+<rect rx="6" ry="6" x="198" y="99" width="28" height="26" class="combo"/>
+<use href="#tabler:screenshot" xlink:href="#tabler:screenshot" x="205" y="105" height="14" width="14.0" class="combo tap glyph tabler:screenshot"/>
 </g>
 </g>
 </g>

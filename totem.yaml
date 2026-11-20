@@ -134,7 +134,7 @@ layers:
     - F1
     - F2
     - F3
-    - {t: F4, h: 2× shot}
+    - F4
     - $$mdi:volume-high$$
     - $$mdi:volume-low$$
     - $$mdi:volume-off$$
@@ -291,6 +291,9 @@ combos:
   l: [Base, LH]
 - p: [11, 22]
   k: $$tabler:device-floppy$$
+  l: [Base, LH]
+- p: [12, 23]
+  k: $$tabler:screenshot$$
   l: [Base, LH]
 - p: [27, 16]
   k: àèé
