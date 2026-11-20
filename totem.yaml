@@ -23,8 +23,8 @@ layers:
     - {t: '$$tabler:terminal$$', h: Fun}
   Nav:
   - - {type: trans}
-    - ◀ ws
-    - ws ▶
+    - {t: ◀ tab, s: ⌃ ◀ ws}
+    - {t: tab ▶, s: ⌃ ws ▶}
     - unread
     - notifs
     - $$tabler:arrow-bar-to-left$$

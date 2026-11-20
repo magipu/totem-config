@@ -56,6 +56,12 @@ parse_config:
     '&o_grave': ò
     '&u_grave': ù
     '&esc_esc': Esc×2
+    '&tab_prev':
+      tap: ◀ tab
+      shifted: ⌃ ◀ ws
+    '&tab_next':
+      tap: tab ▶
+      shifted: ⌃ ws ▶
     '&sel_copy': copy ✓
     '&sel_cut': cut ✓
     '&sel_paste': paste ✓
@@ -265,8 +271,6 @@ parse_config:
     LG(GRAVE): $$tabler:app-window$$ # Next window
     LG(S): $$tabler:device-floppy$$ # Save
     LS(LG(N4)): $$tabler:screenshot$$ # Area screenshot (Shottr)
-    LG(LC(LBKT)): ◀ ws # cmux prev workspace
-    LG(LC(RBKT)): ws ▶ # cmux next workspace
     LG(LS(U)): unread # cmux jump to unread
     LG(I): notifs # cmux notifications
     LC(V): img paste # Claude Code paste image
