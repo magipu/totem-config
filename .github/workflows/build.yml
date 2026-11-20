@@ -21,10 +21,26 @@ jobs:
       - name: Install keymap-drawer
         run: pip install -r requirements.txt
 
+      # Keep downloaded icons between runs so we don't refetch them all from
+      # raw.githubusercontent.com every time (it sometimes answers 503).
+      - name: Cache keymap-drawer glyphs
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/keymap-drawer
+          key: keymap-drawer-${{ hashFiles('keymap_drawer_config.yaml', 'requirements.txt') }}
+          restore-keys: keymap-drawer-
+
       - name: Generate keymap SVG
         run: |
           keymap -c ./keymap_drawer_config.yaml parse -c 10 -z ./config/totem.keymap > totem.yaml
-          keymap -c ./keymap_drawer_config.yaml draw -k totem totem.yaml > totem_keymap.svg
+          for attempt in 1 2 3; do
+            if keymap -c ./keymap_drawer_config.yaml draw -k totem totem.yaml > totem_keymap.svg; then
+              exit 0
+            fi
+            echo "Drawing failed (attempt $attempt), retrying in 20s..."
+            sleep 20
+          done
+          exit 1
 
       - name: Commit updated SVG
         run: |
