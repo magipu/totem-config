@@ -44,10 +44,31 @@ parse_config:
     '&studio_unlock': $$mdi:lock-open-outline$$
     '&copy_cut': $$tabler:clipboard-copy$$
     '&LS_caps': $$mdi:apple-keyboard-shift$$
+    '&sel_line': $$tabler:select$$
     '&smart_num':
       tap: $$tabler:numbers$$
       hold: ''
-    '&grave_acute': $$tabler:language$$
+    '&sl 6': àèé
+    '&a_grave': à
+    '&e_grave': è
+    '&e_acute': é
+    '&i_grave': ì
+    '&o_grave': ò
+    '&u_grave': ù
+    '&f4_shot':
+      tap: F4
+      hold: 2× shot
+    '&esc_esc': Esc×2
+    '&sel_copy': copy ✓
+    '&sel_cut': cut ✓
+    '&sel_paste': paste ✓
+    '&sel_del': del ✓
+    '&to 7': select
+    '&to 0': exit
+    '&term_on': terminal
+    '&term_copy': copy ✓
+    '&term_esc': exit
+    '&vim_top': top (gg)
     '&it_ag_lower': á
     '&it_eg_lower': é
     '&it_ea_lower': è
@@ -246,6 +267,29 @@ parse_config:
     LA(LG(C)): $$tabler:clipboard-list$$ # Clipboard history
     LG(GRAVE): $$tabler:app-window$$ # Next window
     LG(S): $$tabler:device-floppy$$ # Save
+    LG(LC(LBKT)): ◀ ws # cmux prev workspace
+    LG(LC(RBKT)): ws ▶ # cmux next workspace
+    LG(LS(U)): unread # cmux jump to unread
+    LG(I): notifs # cmux notifications
+    LC(V): img paste # Claude Code paste image
+    LG(LS(RET)): zoom # cmux zoom pane
+    LS(LEFT): ⇧←
+    LS(RIGHT): ⇧→
+    LS(UP): ⇧↑
+    LS(DOWN): ⇧↓
+    LS(LG(LEFT)): ⇧ line start
+    LS(LG(RIGHT)): ⇧ line end
+    LS(LG(UP)): ⇧ top
+    LS(LG(DOWN)): ⇧ bottom
+    LS(LA(LEFT)): ⇧ word ←
+    LS(LA(RIGHT)): ⇧ word →
+    LS(LA(UP)): ⇧ para ↑
+    LS(LA(DOWN)): ⇧ para ↓
+    LG(A): all
+    LS(G): bottom (G)
+    LS(V): line (V)
+    LG(LEFT): $$tabler:arrow-bar-to-left$$ # Line start
+    LG(RIGHT): $$tabler:arrow-bar-to-right$$ # Line end
 
     LG(Z): $$tabler:arrow-back-up$$ # Undo
     LG(LS(Z)):

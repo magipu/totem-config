@@ -23,30 +23,30 @@ layers:
     - {t: '$$tabler:terminal$$', h: Fun}
   Nav:
   - - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - HOME
+    - ◀ ws
+    - ws ▶
+    - unread
+    - notifs
+    - $$tabler:arrow-bar-to-left$$
     - $$mdi:transfer-down$$
     - $$mdi:transfer-up$$
-    - END
-    - {type: trans}
+    - $$tabler:arrow-bar-to-right$$
+    - $$tabler:select$$
   - - $$mdi:apple-keyboard-control$$
     - $$mdi:apple-keyboard-option$$
     - $$mdi:apple-keyboard-shift$$
     - $$mdi:apple-keyboard-command$$
-    - {type: trans}
+    - select
     - $$mdi:arrow-left-bold$$
     - $$mdi:arrow-down-bold$$
     - $$mdi:arrow-up-bold$$
     - $$mdi:arrow-right-bold$$
     - {type: trans}
   - - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - Esc×2
+    - $$mdi:keyboard-tab-reverse$$
+    - img paste
+    - zoom
     - {type: trans}
     - $$tabler:arrow-big-left-line$$
     - $$tabler:arrow-big-down-line$$
@@ -134,7 +134,7 @@ layers:
     - F1
     - F2
     - F3
-    - F4
+    - {t: F4, h: 2× shot}
     - $$mdi:volume-high$$
     - $$mdi:volume-low$$
     - $$mdi:volume-off$$
@@ -191,7 +191,7 @@ layers:
     - {type: trans}
   - - {type: trans}
     - {type: trans}
-    - Cmd+A
+    - all
     - {type: trans}
     - {type: trans}
     - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -207,6 +207,55 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
+  Acc:
+  - - {type: trans}
+    - {type: trans}
+    - è
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ù
+    - ì
+    - ò
+    - {type: trans}
+  - - à
+    - {type: trans}
+    - é
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  Select:
+  - ['', '', '', '', terminal, ⇧ line start, ⇧ bottom, ⇧ top, ⇧ line end, '$$tabler:select$$']
+  - ['', '', '', '', '', ⇧←, ⇧↓, ⇧↑, ⇧→, all]
+  - [exit, '', cut ✓, copy ✓, paste ✓, '', ⇧ word ←, ⇧ para ↓, ⇧ para ↑, ⇧ word →]
+  - ['', '', '', '', exit, '', del ✓, '']
+  TermSel:
+  - ['', '', '', '', '', '0', bottom (G), top (gg), $, line (V)]
+  - ['', '', '', V, '', '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$', '$$mdi:arrow-right-bold$$', '']
+  - [exit, '', '', copy ✓, '', '', B, '', '', W]
+  - ['', '', '', '', exit, '', '', '']
 combos:
 - p: [26, 27]
   k: $$tabler:numbers$$
@@ -244,5 +293,5 @@ combos:
   k: $$tabler:device-floppy$$
   l: [Base, LH]
 - p: [27, 16]
-  k: $$tabler:language$$
+  k: àèé
   l: [Base]
