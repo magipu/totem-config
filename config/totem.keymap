@@ -23,6 +23,7 @@
 // #include "zmk-helpers/unicode-chars/italian.dtsi"
 
 #define ______ &trans
+#define XXXXXX &none
 
 #define DEF   0
 #define NAV   1
@@ -31,6 +32,8 @@
 #define FUN   4
 #define LH    5
 #define ACC   6
+#define SEL   7
+#define TSEL  8
 
 /* Timing constants */
 
@@ -105,6 +108,21 @@ ZMK_TAP_DANCE(f4_shot,
 )
 
 // Claude Code: double Esc (rewind). The Esc key's own double-tap toggles LH instead.
+// Select layer actions: do the thing, then return to base
+#define SEL_EXIT(name, key) \
+    ZMK_MACRO(name, wait-ms = <0>; tap-ms = <20>; bindings = <&kp key>, <&to DEF>;)
+
+SEL_EXIT(sel_copy,  LG(C))
+SEL_EXIT(sel_cut,   LG(X))
+SEL_EXIT(sel_paste, LG(V))
+SEL_EXIT(sel_del,   BSPC)
+
+// Terminal select: cmux copy mode (Vim keys) with the same layout as the Select layer
+ZMK_MACRO(term_on,   wait-ms = <0>; tap-ms = <20>; bindings = <&kp LG(LS(M))>, <&to TSEL>;)
+ZMK_MACRO(term_copy, wait-ms = <0>; tap-ms = <20>; bindings = <&kp Y>, <&to DEF>;)
+ZMK_MACRO(term_esc,  wait-ms = <0>; tap-ms = <20>; bindings = <&kp ESC>, <&to DEF>;)
+ZMK_MACRO(vim_top,   wait-ms = <0>; tap-ms = <20>; bindings = <&kp G>, <&kp G>;)
+
 ZMK_MACRO(esc_esc,
     wait-ms = <30>;
     tap-ms = <20>;
@@ -172,8 +190,9 @@ ZMK_MACRO(sel_line,
         // left hand = cmux / Claude Code
         //   W/E prev/next workspace   R jump to unread   T notifications
         //   Z Esc Esc   X Shift+Tab (Claude mode)   C Ctrl+V (paste image)   V zoom pane
+        //   G Select layer (Nav with Shift locked on)
         ______     &kp LG(LC(LBKT))  &kp LG(LC(RBKT))  &kp LG(LS(U))   &kp LG(I)          &kp LG(LEFT)  &kp PG_DN     &kp PG_UP   &kp LG(RIGHT)  &sel_line
-        &kp LCTRL  &kp LALT          &kp LSHFT         &kp LGUI        ______             &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      ______
+        &kp LCTRL  &kp LALT          &kp LSHFT         &kp LGUI        &to SEL            &kp LEFT      &kp DOWN      &kp UP      &kp RIGHT      ______
 ______  &esc_esc   &kp LS(TAB)       &kp LC(V)         &kp LG(LS(RET)) ______             &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  ______  ______
                              ______     ______      &kp SPACE     ______        ______        ______
             >;
@@ -226,6 +245,32 @@ ______  ______   &kp LG(A)  ______    ______          &kp ENTER         ______  
         &a_grave  ______  &e_acute  ______  ______        ______  ______    ______    ______    ______
 ______  ______    ______  ______    ______  ______        ______  ______    ______    ______    ______  ______
                           ______    ______  ______        ______  ______    ______
+            >;
+        };
+
+        // Nav with Shift locked on, entered from Nav G. Same positions as Nav, but every move selects.
+        // C copy, X cut, V paste over, Backspace delete: each does it and returns to base.
+        // Esc or Space just returns to base. Other keys do nothing, so you can't type by accident.
+        // T switches to Terminal select (cmux copy mode).
+        select_layer {
+            display-name = "Select";
+            bindings = <
+            XXXXXX  XXXXXX    XXXXXX     XXXXXX     &term_on      &kp LS(LG(LEFT))  &kp LS(LG(DOWN))  &kp LS(LG(UP))  &kp LS(LG(RIGHT))  &sel_line
+            XXXXXX  XXXXXX    XXXXXX     XXXXXX     XXXXXX        &kp LS(LEFT)      &kp LS(DOWN)      &kp LS(UP)      &kp LS(RIGHT)      &kp LG(A)
+&to DEF     XXXXXX  &sel_cut  &sel_copy  &sel_paste  XXXXXX        &kp LS(LA(LEFT))  &kp LS(LA(DOWN))  &kp LS(LA(UP))  &kp LS(LA(RIGHT))  XXXXXX  XXXXXX
+                              XXXXXX     XXXXXX     &to DEF       XXXXXX            &sel_del          XXXXXX
+            >;
+        };
+
+        // Terminal select: cmux copy mode, same positions as Select. Move to the start, F starts/stops
+        // selecting, C copies and returns to base, Esc or Space cancels.
+        term_select_layer {
+            display-name = "TermSel";
+            bindings = <
+            XXXXXX  XXXXXX  XXXXXX      XXXXXX  XXXXXX        &kp N0    &kp LS(G)  &vim_top  &kp DLLR   &kp LS(V)
+            XXXXXX  XXXXXX  XXXXXX      &kp V   XXXXXX        &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  XXXXXX
+&term_esc   XXXXXX  XXXXXX  &term_copy  XXXXXX  XXXXXX        &kp B     XXXXXX     XXXXXX    &kp W      XXXXXX  XXXXXX
+                            XXXXXX      XXXXXX  &term_esc     XXXXXX    XXXXXX     XXXXXX
             >;
         };
     };

@@ -36,7 +36,7 @@ layers:
     - $$mdi:apple-keyboard-option$$
     - $$mdi:apple-keyboard-shift$$
     - $$mdi:apple-keyboard-command$$
-    - {type: trans}
+    - select
     - $$mdi:arrow-left-bold$$
     - $$mdi:arrow-down-bold$$
     - $$mdi:arrow-up-bold$$
@@ -191,7 +191,7 @@ layers:
     - {type: trans}
   - - {type: trans}
     - {type: trans}
-    - Cmd+A
+    - all
     - {type: trans}
     - {type: trans}
     - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -246,6 +246,16 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
+  Select:
+  - ['', '', '', '', terminal, ⇧ line start, ⇧ bottom, ⇧ top, ⇧ line end, '$$tabler:select$$']
+  - ['', '', '', '', '', ⇧←, ⇧↓, ⇧↑, ⇧→, all]
+  - [exit, '', cut ✓, copy ✓, paste ✓, '', ⇧ word ←, ⇧ para ↓, ⇧ para ↑, ⇧ word →]
+  - ['', '', '', '', exit, '', del ✓, '']
+  TermSel:
+  - ['', '', '', '', '', '0', bottom (G), top (gg), $, line (V)]
+  - ['', '', '', V, '', '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-up-bold$$', '$$mdi:arrow-right-bold$$', '']
+  - [exit, '', '', copy ✓, '', '', B, '', '', W]
+  - ['', '', '', '', exit, '', '', '']
 combos:
 - p: [26, 27]
   k: $$tabler:numbers$$
